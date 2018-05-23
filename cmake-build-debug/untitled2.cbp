@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="untitled2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/vover/CLionProjects/untitled2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/vover/CLionProjects/untitled2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/vover/CLionProjects/untitled2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled2">
+				<Option output="/home/vover/CLionProjects/untitled2/cmake-build-debug/untitled2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vover/CLionProjects/untitled2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled2/fast">
+				<Option output="/home/vover/CLionProjects/untitled2/cmake-build-debug/untitled2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vover/CLionProjects/untitled2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vover/CLionProjects/untitled2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/vover/CLionProjects/untitled2/case.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/case.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/functions.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/functions.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/gas_two.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/gas_two.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/eigenval.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/eigenval.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/elcmp.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/errhandl.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/errhandl.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/factor.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/factor.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/itersolv.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/itersolv.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/lastypes.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/matrix.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/matrix.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/mlsolv.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/mlsolv.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/operats.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/operats.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/precond.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/precond.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/qmatrix.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/qmatrix.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/rtc.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/rtc.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/vector.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/vector.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/main.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/residuals.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/residuals.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
