@@ -234,11 +234,18 @@ double g (double t, double x, double y)
 
 double dg_dt (double t, double x, double y)
 {
+    (void) t;
+    (void) x;
+    (void) y;
+
     return 1;
 }
 
 double dg_dx (double t, double x, double y)
 {
+    (void) t;
+    (void) y;
+
     double res  = - sin (x);
     res /= (cos ( x) + 3./2.);
     return res;
@@ -246,6 +253,9 @@ double dg_dx (double t, double x, double y)
 
 double dg_dy (double t, double x, double y)
 {
+    (void) t;
+    (void) x;
+
     double res = cos (y);
     res /=  (sin (y) + 3./2.);
     return res;

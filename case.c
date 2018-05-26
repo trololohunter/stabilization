@@ -319,6 +319,8 @@ size_t case0 (QMatrix_L *A, Vector *B, T_const t_c, MUM_const m_c, MM_step m_s, 
 size_t case1 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
               double *V1, double *V2, double *G, int m, P_she p_s, double mu, size_t mm)
 {
+    (void) mu;
+
     double tmp;
     gv1v2 v;
 
@@ -353,6 +355,8 @@ size_t case1 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
 size_t case2 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
               double *V1, double *V2, double *G, int m, P_she p_s, double mu, size_t mm)
 {
+    (void) mu;
+
     double tmp;
     int n = p_s.M_x + 1;
     gv1v2 v;
@@ -390,6 +394,9 @@ size_t case2 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
 size_t case3 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
               double *V1, double *V2, double *G, int m, P_she p_s, double mu, size_t mm, double w)
 {
+    (void) mu;
+    (void) w;
+
     double tmp;
     int n = p_s.M_x + 1;
     gv1v2 v;
@@ -428,6 +435,8 @@ size_t case3 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
 size_t case4 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
               double *V1, double *V2, double *G, int m, P_she p_s, double mu, size_t mm)
 {
+    (void) mu;
+
     double tmp;
     int n = p_s.M_x + 1;
     gv1v2 v;
@@ -464,6 +473,8 @@ size_t case4 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
 size_t case9 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
               double *V1, double *V2, double *G, int m, P_she p_s, double mu, size_t mm)
 {
+    (void) mu;
+
     double tmp;
     int n = p_s.M_x + 1;
     gv1v2 v;
@@ -515,6 +526,8 @@ size_t case9 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
 size_t case10 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
                double *V1, double *V2, double *G, int m, P_she p_s, double mu, size_t mm)
 {
+    (void) mu;
+
     double tmp;
     int n = p_s.M_x + 1;
     gv1v2 v;
