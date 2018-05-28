@@ -4,7 +4,7 @@
 #include "gas_two.h"
 #include "residuals.h"
 
-#define IT_max 0
+#define IT_max 1
 
 void print_norms(FILE *f, double *norm, int it_max);
 
@@ -20,7 +20,7 @@ int main() {
     int *st;
     int it_sp, it_t, k;
     int it_max = IT_max + 1;
-    double *nc_g, *nl2_g, *nc_v1, *nl2_v1, *nc_v2, *nl2_v2;
+    double *nc_g, *nl2_g, *nw12_g, *nc_v1, *nl2_v1, *nw12_v1, *nc_v2, *nl2_v2, *nw12_v2;
     int deg = deg2inx(it_max+1);
     Norm_Step n_s;
 
@@ -32,6 +32,9 @@ int main() {
     nl2_v1 = (double *) malloc(deg * sizeof(double));
     nc_v2 = (double *) malloc(deg * sizeof(double));
     nl2_v2 = (double *) malloc(deg * sizeof(double));
+    nw12_g = (double *) malloc(deg * sizeof(double));
+    nw12_v1 = (double *) malloc(deg * sizeof(double));
+    nw12_v2 = (double *) malloc(deg * sizeof(double));
 
     param_dif(&p_d);
 
@@ -63,6 +66,11 @@ int main() {
             nl2_v2[k] = n_s.V2norm;
             nl2_g[k] = n_s.Gnorm;
 
+            residual_W12(V1, V2, G, p_s, &n_s, u1, u2, g);
+            nw12_v1[k] = n_s.V1norm;
+            nw12_v2[k] = n_s.V2norm;
+            nw12_g[k] = n_s.Gnorm;
+
             free(V1);
             free(V2);
             free(G);
@@ -77,10 +85,13 @@ int main() {
 
     print_norms(f, nc_g, it_max);
     print_norms(f, nl2_g, it_max);
+    print_norms(f, nw12_g, it_max);
     print_norms(f, nc_v1, it_max);
     print_norms(f, nl2_v1, it_max);
+    print_norms(f, nw12_v1, it_max);
     print_norms(f, nc_v2, it_max);
     print_norms(f, nl2_v2, it_max);
+    print_norms(f, nw12_v2, it_max);
 
     fclose(f);
 
@@ -90,6 +101,9 @@ int main() {
     free(nl2_g);
     free(nl2_v1);
     free(nl2_v2);
+    free(nw12_g);
+    free(nw12_v1);
+    free(nw12_v2);
 
     return 0;
 }

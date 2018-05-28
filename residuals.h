@@ -20,6 +20,6 @@ double residual_Ch_step (double *V1, double *V2, double *G, P_she p_s, int k, fu
 double residual_Ch (double *V1, double *V2, double *G, P_she p_s, Norm_Step *n_s, func u1, func u2, func ro);
 double residual_L2h_step (double *V1, double *V2, double *G, P_she p_s, int k, func u1, func u2, func ro);
 double residual_L2h (double *V1, double *V2, double *G, P_she p_s, Norm_Step *n_s, func u1, func u2, func ro);
-
+double residual_W12 (double *V1, double *V2, double *G, P_she p_s, Norm_Step *n_s, func u1, func u2, func ro);
 
 #endif //UNTITLED2_RESIDUALS_H
