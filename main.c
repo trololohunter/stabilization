@@ -3,8 +3,9 @@
 #include <unistd.h>
 #include "gas_two.h"
 #include "residuals.h"
+#include "gnuploting.h"
 
-#define IT_max 1
+#define IT_max -1
 
 void print_norms(FILE *f, double *norm, int it_max);
 
@@ -38,6 +39,9 @@ int main() {
 
     param_dif(&p_d);
 
+    clean_png ("g");
+    clean_png ("u1");
+
     k = 0;
     for (it_t = 1; it_t < deg2inx(it_max) + 1; it_t *= 2)
     {
@@ -55,7 +59,7 @@ int main() {
             Sxema(G, V1, V2, st, p_s, p_d);
 
             printf("asdfsdfa \n M_x = %d \n M_y = %d \n N   = %d \n", p_s.M_x, p_s.M_y, p_s.N);
-
+/*
             residual_Ch(V1, V2, G, p_s, &n_s, u1, u2, g);
             nc_v1[k] = n_s.V1norm;
             nc_v2[k] = n_s.V2norm;
@@ -70,7 +74,7 @@ int main() {
             nw12_v1[k] = n_s.V1norm;
             nw12_v2[k] = n_s.V2norm;
             nw12_g[k] = n_s.Gnorm;
-
+*/
             free(V1);
             free(V2);
             free(G);
@@ -78,7 +82,7 @@ int main() {
             ++k;
         }
     }
-
+/*
     f = fopen("ff.txt", "w");
 
     if (!f) printf ("dsfasafdasdfasdfsafdkajdsfsa \n");
@@ -94,7 +98,7 @@ int main() {
     print_norms(f, nw12_v2, it_max);
 
     fclose(f);
-
+*/
     free(nc_g);
     free(nc_v1);
     free(nc_v2);

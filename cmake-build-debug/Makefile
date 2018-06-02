@@ -204,6 +204,33 @@ gas_two.c.s:
 	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/gas_two.c.s
 .PHONY : gas_two.c.s
 
+gnuploting.o: gnuploting.c.o
+
+.PHONY : gnuploting.o
+
+# target to build an object file
+gnuploting.c.o:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/gnuploting.c.o
+.PHONY : gnuploting.c.o
+
+gnuploting.i: gnuploting.c.i
+
+.PHONY : gnuploting.i
+
+# target to preprocess a source file
+gnuploting.c.i:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/gnuploting.c.i
+.PHONY : gnuploting.c.i
+
+gnuploting.s: gnuploting.c.s
+
+.PHONY : gnuploting.s
+
+# target to generate assembly for a file
+gnuploting.c.s:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/gnuploting.c.s
+.PHONY : gnuploting.c.s
+
 laspack/eigenval.o: laspack/eigenval.c.o
 
 .PHONY : laspack/eigenval.o
@@ -573,6 +600,9 @@ help:
 	@echo "... gas_two.o"
 	@echo "... gas_two.i"
 	@echo "... gas_two.s"
+	@echo "... gnuploting.o"
+	@echo "... gnuploting.i"
+	@echo "... gnuploting.s"
 	@echo "... laspack/eigenval.o"
 	@echo "... laspack/eigenval.i"
 	@echo "... laspack/eigenval.s"

@@ -102,6 +102,12 @@
 		<Unit filename="/home/vover/CLionProjects/untitled2/gas_two.h">
 			<Option target="untitled2"/>
 		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/gnuploting.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/gnuploting.h">
+			<Option target="untitled2"/>
+		</Unit>
 		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/eigenval.c">
 			<Option target="untitled2"/>
 		</Unit>

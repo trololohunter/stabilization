@@ -16,5 +16,5 @@ set(SOURCE_FILES main.c gas_two.c case.c gas_two.h residuals.h residuals.c funct
         laspack/lastypes.h
         laspack/precond.h laspack/precond.c
         laspack/rtc.h laspack/rtc.c
-        laspack/elcmp.h)
+        laspack/elcmp.h gnuploting.h gnuploting.c)
 add_executable(untitled2 ${SOURCE_FILES})

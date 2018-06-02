@@ -11,7 +11,7 @@
 #include "residuals.h"
 #include "laspack/rtc.h"
 #include "functions.h"
-
+#include "gnuploting.h"
 
 
 #define EPS 1e-8
@@ -23,7 +23,7 @@ void param_dif (P_gas *p_d)
 {
     p_d->Segm_X = 2*M_PI;
     p_d->Segm_Y = 2*M_PI;
-    p_d->Segm_T = 1;
+    p_d->Segm_T = 10;
     p_d->mu = 0.1;
     p_d->p_ro = 10;
     p_d->omega = 1;
@@ -182,12 +182,12 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
 
 
 
-    first_fill (V1, V2, G, p_s, p_d.omega, u1, u2, g);
-/*
+    first_fill___ (V1, V2, G, p_s, p_d.omega);
+
     print_vector(G, p_s.Dim);
     print_vector(V1, p_s.Dim);
     print_vector(V2, p_s.Dim);
-*/
+
 
     param_t_const(&t_c, p_s, p_d);
     SetRTCAccuracy(EPS);
@@ -303,13 +303,15 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
 */
 
 //        sleep(1);
-        residual_Ch_step(V1, V2, G, p_s, k, u1, u2, g);
-        residual_L2h_step(V1, V2, G, p_s, k, u1, u2, g);
-        printf("dddfs %d \n", k);
+        //residual_Ch_step(V1, V2, G, p_s, k, u1, u2, g);
+        //residual_L2h_step(V1, V2, G, p_s, k, u1, u2, g);
+        //printf("dddfs %d \n", k);
 
         Q_Destr(&A);
         V_Destr(&b);
         V_Destr(&x);
+
+        run_gnuplot(p_s, V1, V2, G, k);
     }
 
 

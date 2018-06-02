@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled2.dir/laspack/qmatrix.c.o"
   "CMakeFiles/untitled2.dir/laspack/precond.c.o"
   "CMakeFiles/untitled2.dir/laspack/rtc.c.o"
+  "CMakeFiles/untitled2.dir/gnuploting.c.o"
   "untitled2.pdb"
   "untitled2"
 )

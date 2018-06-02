@@ -205,9 +205,6 @@ void param_gv1v2_4 (double *V1, double *V2, double *G, int m, int n, gv1v2 *v)
 }
 
 
-void first_fill (double *V1, double *V2, double *G, P_she p_s,
-                 double w, func u1, func u2, func ro);
-
 void first_fill(double *V1, double *V2, double *G, P_she p_s, double w, func u1, func u2, func ro) {
     int i, j;
     for (i = 0; i < p_s.M_y + 1; ++i)
@@ -224,6 +221,22 @@ void first_fill(double *V1, double *V2, double *G, P_she p_s, double w, func u1,
         }
     //for (j = 1; j < p_s.M_x/2; ++j)
     //V2[j] = w;
+}
+
+void first_fill___ (double *V1, double *V2, double *G, P_she p_s,
+                    double w)
+{
+    int i, j;
+    for (i = 0; i < p_s.M_y + 1; ++i)
+        for (j = 0; j < p_s.M_x + 1; ++j)
+        {
+            V1[i * (p_s.M_x + 1) + j] = 0;
+            V2[i * (p_s.M_x + 1) + j] = 0;
+            G[i * (p_s.M_x + 1) + j] = 0;
+        }
+    for (j = 1; j < p_s.M_x/2; ++j)
+    V2[j] = w;
+
 }
 
 size_t case0 (QMatrix_L *A, Vector *B, T_const t_c, MUM_const m_c, MM_step m_s, int k,
@@ -426,7 +439,7 @@ size_t case3 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
     mm++;
     Q_SetLen(A, mm, 1);
     Q_SetEntry(A, mm, 0, m_s.mmv200, 1.);
-    tmp = 0.; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
+    tmp = w; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
     V_SetCmp(B, mm, tmp);
 
     return mm;
@@ -533,7 +546,7 @@ size_t case10 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
     gv1v2 v;
 
     param_gv1v2_3(V1, V2, G, m, n, &v);
-/*
+
     Q_SetLen(A, mm, 4);
     tmp = 2. - t_c.thy * v.v200;
     Q_SetEntry(A, mm, 0, m_s.mmg00, tmp);
@@ -541,14 +554,14 @@ size_t case10 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
     Q_SetEntry(A, mm, 1, m_s.mmg0R, tmp);
     Q_SetEntry(A, mm, 2, m_s.mmv20R, t_c.thy2);
     Q_SetEntry(A, mm, 3, m_s.mmv200, -t_c.thy2);
-*/
 
+/*
     Q_SetLen(A, mm, 3);
     Q_SetEntry(A, mm, 0, mm, 2.);
     tmp = t_c.thy * v.v20R;
     Q_SetEntry(A, mm, 1, m_s.mmg0R, tmp);
     Q_SetEntry(A, mm, 2, m_s.mmv20R, t_c.thy2);
-
+*/
     tmp = 2. * v.g00 + t_c.thy * v.g00 * (v.v20R - v.v200)
           + t_c.thy * (v.g00 * v.v200 - 2.5 * v.g0R * v.v20R
                        + 2. * G[m+2*n] * V2 [m+2*n] - 0.5 * G[m+3*n] * V2[m+3*n]
@@ -564,16 +577,16 @@ size_t case10 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
     V_SetCmp(B, mm, tmp);
 
     mm++;
-/*    Q_SetLen(A, mm, 2);
+    Q_SetLen(A, mm, 2);
     Q_SetEntry(A, mm, 0, m_s.mmv200, -1.);
     Q_SetEntry(A, mm, 1, m_s.mmv20R, 1.);
     tmp = 0; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
     V_SetCmp(B, mm, tmp);
-*/
+/*
     Q_SetLen(A, mm, 1);
     Q_SetEntry(A, mm, 0, m_s.mmv200, 1.);
     tmp = 0.; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
     V_SetCmp(B, mm, tmp);
-
+*/
     return mm;
 }

@@ -47,12 +47,34 @@ laspack/rtc.h
 /home/vover/CLionProjects/untitled2/laspack/rtc.h
 functions.h
 /home/vover/CLionProjects/untitled2/functions.h
+gnuploting.h
+/home/vover/CLionProjects/untitled2/gnuploting.h
 
 /home/vover/CLionProjects/untitled2/gas_two.h
 math.h
 -
 glob.h
 -
+
+/home/vover/CLionProjects/untitled2/gnuploting.c
+stdio.h
+-
+math.h
+-
+time.h
+-
+zconf.h
+-
+stdlib.h
+-
+gnuploting.h
+/home/vover/CLionProjects/untitled2/gnuploting.h
+gas_two.h
+/home/vover/CLionProjects/untitled2/gas_two.h
+
+/home/vover/CLionProjects/untitled2/gnuploting.h
+gas_two.h
+/home/vover/CLionProjects/untitled2/gas_two.h
 
 /home/vover/CLionProjects/untitled2/laspack/copyrght.h
 
@@ -361,6 +383,8 @@ gas_two.h
 /home/vover/CLionProjects/untitled2/gas_two.h
 residuals.h
 /home/vover/CLionProjects/untitled2/residuals.h
+gnuploting.h
+/home/vover/CLionProjects/untitled2/gnuploting.h
 
 /home/vover/CLionProjects/untitled2/residuals.c
 stdio.h

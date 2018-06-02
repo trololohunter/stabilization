@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/vover/CLionProjects/untitled2/case.c" "/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/untitled2.dir/case.c.o"
   "/home/vover/CLionProjects/untitled2/functions.c" "/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/untitled2.dir/functions.c.o"
   "/home/vover/CLionProjects/untitled2/gas_two.c" "/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/untitled2.dir/gas_two.c.o"
+  "/home/vover/CLionProjects/untitled2/gnuploting.c" "/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/untitled2.dir/gnuploting.c.o"
   "/home/vover/CLionProjects/untitled2/laspack/eigenval.c" "/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/untitled2.dir/laspack/eigenval.c.o"
   "/home/vover/CLionProjects/untitled2/laspack/errhandl.c" "/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/untitled2.dir/laspack/errhandl.c.o"
   "/home/vover/CLionProjects/untitled2/laspack/factor.c" "/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/untitled2.dir/laspack/factor.c.o"

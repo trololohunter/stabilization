@@ -21,6 +21,7 @@ CMakeFiles/untitled2.dir/gas_two.c.o: ../case.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../functions.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../gas_two.c
 CMakeFiles/untitled2.dir/gas_two.c.o: ../gas_two.h
+CMakeFiles/untitled2.dir/gas_two.c.o: ../gnuploting.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../laspack/copyrght.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../laspack/eigenval.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../laspack/elcmp.h
@@ -31,6 +32,10 @@ CMakeFiles/untitled2.dir/gas_two.c.o: ../laspack/qmatrix.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../laspack/rtc.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../laspack/vector.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../residuals.h
+
+CMakeFiles/untitled2.dir/gnuploting.c.o: ../gas_two.h
+CMakeFiles/untitled2.dir/gnuploting.c.o: ../gnuploting.c
+CMakeFiles/untitled2.dir/gnuploting.c.o: ../gnuploting.h
 
 CMakeFiles/untitled2.dir/laspack/eigenval.c.o: ../laspack/copyrght.h
 CMakeFiles/untitled2.dir/laspack/eigenval.c.o: ../laspack/eigenval.c
@@ -150,6 +155,7 @@ CMakeFiles/untitled2.dir/laspack/vector.c.o: ../laspack/vector.h
 
 CMakeFiles/untitled2.dir/main.c.o: ../functions.h
 CMakeFiles/untitled2.dir/main.c.o: ../gas_two.h
+CMakeFiles/untitled2.dir/main.c.o: ../gnuploting.h
 CMakeFiles/untitled2.dir/main.c.o: ../main.c
 CMakeFiles/untitled2.dir/main.c.o: ../residuals.h
 

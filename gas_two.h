@@ -8,9 +8,9 @@
 #include <math.h>
 #include <glob.h>
 
-#define zero_spl_x  40 //zero splitting x
-#define zero_spl_y  40
-#define zero_spl_t  40
+#define zero_spl_x  20 //zero splitting x
+#define zero_spl_y  20
+#define zero_spl_t  100
 
 typedef struct
 {
