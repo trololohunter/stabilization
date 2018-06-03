@@ -4,6 +4,7 @@
 
 #include <math.h>
 #include "functions.h"
+#include "gas_two.h"
 
 double u1_zero (double t, double x1, double x2)
 {
@@ -361,7 +362,7 @@ double du1u2_dy (double t, double x, double y)
 
 double Func_0 (double t, double x, double y)
 {
-    return 0;
+    if (SMOOTH_SOLUTION != 1) return 0;
     double tmp = 2 - g (t, x, y);
     double res =
             + dg_dt (t, x, y)
@@ -379,7 +380,7 @@ double Func_0 (double t, double x, double y)
 
 double Func_1 (double t, double x, double y, double p_rho, double mu)
 {
-    return 0;
+    if (SMOOTH_SOLUTION != 1) return 0;
     double res =
             + du1_dt (t, x, y)
             + (1. / 3.) * (u1 (t, x, y) * du1_dx (t, x, y)
@@ -397,7 +398,7 @@ double Func_1 (double t, double x, double y, double p_rho, double mu)
 
 double Func_2 (double t, double x, double y, double p_rho, double mu)
 {
-    return 0;
+    if (SMOOTH_SOLUTION != 1) return 0;
     double res =
             + du2_dt (t, x, y)
             + (1. / 3.) * (u2 (t, x, y) * du2_dy (t, x, y)

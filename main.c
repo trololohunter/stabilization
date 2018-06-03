@@ -59,22 +59,23 @@ int main() {
             Sxema(G, V1, V2, st, p_s, p_d);
 
             printf("asdfsdfa \n M_x = %d \n M_y = %d \n N   = %d \n", p_s.M_x, p_s.M_y, p_s.N);
-/*
-            residual_Ch(V1, V2, G, p_s, &n_s, u1, u2, g);
-            nc_v1[k] = n_s.V1norm;
-            nc_v2[k] = n_s.V2norm;
-            nc_g[k] = n_s.Gnorm;
 
-            residual_L2h(V1, V2, G, p_s, &n_s, u1, u2, g);
-            nl2_v1[k] = n_s.V1norm;
-            nl2_v2[k] = n_s.V2norm;
-            nl2_g[k] = n_s.Gnorm;
+            if (SMOOTH_SOLUTION == 1) {
+                residual_Ch(V1, V2, G, p_s, &n_s, u1, u2, g);
+                nc_v1[k] = n_s.V1norm;
+                nc_v2[k] = n_s.V2norm;
+                nc_g[k] = n_s.Gnorm;
 
-            residual_W12(V1, V2, G, p_s, &n_s, u1, u2, g);
-            nw12_v1[k] = n_s.V1norm;
-            nw12_v2[k] = n_s.V2norm;
-            nw12_g[k] = n_s.Gnorm;
-*/
+                residual_L2h(V1, V2, G, p_s, &n_s, u1, u2, g);
+                nl2_v1[k] = n_s.V1norm;
+                nl2_v2[k] = n_s.V2norm;
+                nl2_g[k] = n_s.Gnorm;
+
+                residual_W12(V1, V2, G, p_s, &n_s, u1, u2, g);
+                nw12_v1[k] = n_s.V1norm;
+                nw12_v2[k] = n_s.V2norm;
+                nw12_g[k] = n_s.Gnorm;
+            }
             free(V1);
             free(V2);
             free(G);
@@ -82,23 +83,23 @@ int main() {
             ++k;
         }
     }
-/*
-    f = fopen("ff.txt", "w");
+    if (SMOOTH_SOLUTION == 1) {
+        f = fopen("ff.txt", "w");
 
-    if (!f) printf ("dsfasafdasdfasdfsafdkajdsfsa \n");
+        if (!f) printf("dsfasafdasdfasdfsafdkajdsfsa \n");
 
-    print_norms(f, nc_g, it_max);
-    print_norms(f, nl2_g, it_max);
-    print_norms(f, nw12_g, it_max);
-    print_norms(f, nc_v1, it_max);
-    print_norms(f, nl2_v1, it_max);
-    print_norms(f, nw12_v1, it_max);
-    print_norms(f, nc_v2, it_max);
-    print_norms(f, nl2_v2, it_max);
-    print_norms(f, nw12_v2, it_max);
+        print_norms(f, nc_g, it_max);
+        print_norms(f, nl2_g, it_max);
+        print_norms(f, nw12_g, it_max);
+        print_norms(f, nc_v1, it_max);
+        print_norms(f, nl2_v1, it_max);
+        print_norms(f, nw12_v1, it_max);
+        print_norms(f, nc_v2, it_max);
+        print_norms(f, nl2_v2, it_max);
+        print_norms(f, nw12_v2, it_max);
 
-    fclose(f);
-*/
+        fclose(f);
+    }
     free(nc_g);
     free(nc_v1);
     free(nc_v2);

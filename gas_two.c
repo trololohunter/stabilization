@@ -181,13 +181,13 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
     int m;
 
 
-
-    first_fill___ (V1, V2, G, p_s, p_d.omega);
-
+    if (SMOOTH_SOLUTION == 1) first_fill(V1, V2, G, p_s, p_d.omega, u1, u2, g);
+    else first_fill___ (V1, V2, G, p_s, p_d.omega);
+/*
     print_vector(G, p_s.Dim);
     print_vector(V1, p_s.Dim);
     print_vector(V2, p_s.Dim);
-
+*/
 
     param_t_const(&t_c, p_s, p_d);
     SetRTCAccuracy(EPS);
@@ -217,17 +217,7 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
             V_SetCmp(&x, 3 * i + 3, V2[i]);
         }
 
-        /*
-        for (size_t i = 0; i < 3*p_s.Dim; ++i) {
-            tmp = V_GetCmp(&x, i);
-            printf("%lf \n", tmp);
-        }
-            printf("\n");
-*/
-  /*      print_vector(G, p_s.Dim);
-        print_vector(V1, p_s.Dim);
-        print_vector(V2, p_s.Dim);
-*/
+
         for (m = 0; m < p_s.Dim; ++m)
         {
             param_MM_step(&m_s,mm,p_s.M_x+1, m);
@@ -274,12 +264,7 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
 
             }
             ++mm;
-/*            printf ("%d \n", mm);
-            printf ("f0 = %e \n f1 = %e \n f2 = %e \n",
-                    rhs_f0_test_pop(k * p_s.tau, m % (p_s.M_x + 1) * p_s.h_x, m / (p_s.M_x + 1) * p_s.h_y),
-                    rhs_f1_test_pop(k * p_s.tau, m % (p_s.M_x + 1) * p_s.h_x, m / (p_s.M_x + 1) * p_s.h_y, p_d.mu),
-                    rhs_f2_test_pop(k * p_s.tau, m % (p_s.M_x + 1) * p_s.h_x, m / (p_s.M_x + 1) * p_s.h_y, p_d.mu));
-*/      }
+        }
 
         CGSIter(&A, &x, &b, MAX_ITER, SSORPrecond, 1);
 
@@ -296,22 +281,15 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
             if (fabs(V1[m]) < EEPPSS ) V1[m] = 0;
             if (fabs(V2[m]) < EEPPSS ) V2[m] = 0;
         }
-/*
-        print_vector(G, p_s.Dim);
-        print_vector(V1, p_s.Dim);
-        print_vector(V2, p_s.Dim);
-*/
+        sleep(1);
 
-//        sleep(1);
-        //residual_Ch_step(V1, V2, G, p_s, k, u1, u2, g);
-        //residual_L2h_step(V1, V2, G, p_s, k, u1, u2, g);
-        //printf("dddfs %d \n", k);
 
         Q_Destr(&A);
         V_Destr(&b);
         V_Destr(&x);
 
-        run_gnuplot(p_s, V1, V2, G, k);
+        if (SMOOTH_SOLUTION != 1)
+            run_gnuplot(p_s, V1, V2, G, k);
     }
 
 
