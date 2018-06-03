@@ -16,6 +16,7 @@ CMakeFiles/untitled2.dir/case.c.o: ../laspack/vector.h
 
 CMakeFiles/untitled2.dir/functions.c.o: ../functions.c
 CMakeFiles/untitled2.dir/functions.c.o: ../functions.h
+CMakeFiles/untitled2.dir/functions.c.o: ../gas_two.h
 
 CMakeFiles/untitled2.dir/gas_two.c.o: ../case.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../functions.h

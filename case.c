@@ -408,7 +408,6 @@ size_t case3 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
               double *V1, double *V2, double *G, int m, P_she p_s, double mu, size_t mm, double w)
 {
     (void) mu;
-    (void) w;
 
     double tmp;
     int n = p_s.M_x + 1;
@@ -416,13 +415,22 @@ size_t case3 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
 
     param_gv1v2_3(V1, V2, G, m, n, &v);
 
-    Q_SetLen(A, mm, 4);
-    tmp = 2. - t_c.thy * v.v200;
-    Q_SetEntry(A, mm, 0, m_s.mmg00, tmp);
-    tmp = t_c.thy * v.v20R;
-    Q_SetEntry(A, mm, 1, m_s.mmg0R, tmp);
-    Q_SetEntry(A, mm, 2, m_s.mmv20R, t_c.thy2);
-    Q_SetEntry(A, mm, 3, m_s.mmv200, -t_c.thy2);
+    if (SMOOTH_SOLUTION == 1) {
+        Q_SetLen(A, mm, 3);
+        Q_SetEntry(A, mm, 0, mm, 2.);
+        tmp = t_c.thy * v.v20R;
+        Q_SetEntry(A, mm, 1, m_s.mmg0R, tmp);
+        Q_SetEntry(A, mm, 2, m_s.mmv20R, t_c.thy2);
+    }
+    else {
+        Q_SetLen(A, mm, 4);
+        tmp = 2. - t_c.thy * v.v200;
+        Q_SetEntry(A, mm, 0, m_s.mmg00, tmp);
+        tmp = t_c.thy * v.v20R;
+        Q_SetEntry(A, mm, 1, m_s.mmg0R, tmp);
+        Q_SetEntry(A, mm, 2, m_s.mmv20R, t_c.thy2);
+        Q_SetEntry(A, mm, 3, m_s.mmv200, -t_c.thy2);
+    }
 
     tmp = 2. * v.g00 + t_c.thy * v.g00 * (v.v20R - v.v200)
           + t_c.thy * (v.g00 * v.v200 -2.5 * v.g0R * v.v20R + 2. * G[m+2*n] * V2 [m+2*n] - 0.5 * G[m+3*n] * V2[m+3*n]
@@ -439,7 +447,11 @@ size_t case3 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
     mm++;
     Q_SetLen(A, mm, 1);
     Q_SetEntry(A, mm, 0, m_s.mmv200, 1.);
-    tmp = w; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
+    if (SMOOTH_SOLUTION == 1) {
+        tmp = 0; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
+        (void) w;
+    }
+    else tmp = w;
     V_SetCmp(B, mm, tmp);
 
     return mm;
@@ -547,21 +559,23 @@ size_t case10 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
 
     param_gv1v2_3(V1, V2, G, m, n, &v);
 
-    Q_SetLen(A, mm, 4);
-    tmp = 2. - t_c.thy * v.v200;
-    Q_SetEntry(A, mm, 0, m_s.mmg00, tmp);
-    tmp = t_c.thy * v.v20R;
-    Q_SetEntry(A, mm, 1, m_s.mmg0R, tmp);
-    Q_SetEntry(A, mm, 2, m_s.mmv20R, t_c.thy2);
-    Q_SetEntry(A, mm, 3, m_s.mmv200, -t_c.thy2);
+    if (SMOOTH_SOLUTION == 1) {
+        Q_SetLen(A, mm, 3);
+        Q_SetEntry(A, mm, 0, mm, 2.);
+        tmp = t_c.thy * v.v20R;
+        Q_SetEntry(A, mm, 1, m_s.mmg0R, tmp);
+        Q_SetEntry(A, mm, 2, m_s.mmv20R, t_c.thy2);
+    }
+    else {
+        Q_SetLen(A, mm, 4);
+        tmp = 2. - t_c.thy * v.v200;
+        Q_SetEntry(A, mm, 0, m_s.mmg00, tmp);
+        tmp = t_c.thy * v.v20R;
+        Q_SetEntry(A, mm, 1, m_s.mmg0R, tmp);
+        Q_SetEntry(A, mm, 2, m_s.mmv20R, t_c.thy2);
+        Q_SetEntry(A, mm, 3, m_s.mmv200, -t_c.thy2);
+    }
 
-/*
-    Q_SetLen(A, mm, 3);
-    Q_SetEntry(A, mm, 0, mm, 2.);
-    tmp = t_c.thy * v.v20R;
-    Q_SetEntry(A, mm, 1, m_s.mmg0R, tmp);
-    Q_SetEntry(A, mm, 2, m_s.mmv20R, t_c.thy2);
-*/
     tmp = 2. * v.g00 + t_c.thy * v.g00 * (v.v20R - v.v200)
           + t_c.thy * (v.g00 * v.v200 - 2.5 * v.g0R * v.v20R
                        + 2. * G[m+2*n] * V2 [m+2*n] - 0.5 * G[m+3*n] * V2[m+3*n]
@@ -577,16 +591,19 @@ size_t case10 (QMatrix_L *A, Vector *B, T_const t_c, MM_step m_s, int k,
     V_SetCmp(B, mm, tmp);
 
     mm++;
-    Q_SetLen(A, mm, 2);
-    Q_SetEntry(A, mm, 0, m_s.mmv200, -1.);
-    Q_SetEntry(A, mm, 1, m_s.mmv20R, 1.);
-    tmp = 0; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
-    V_SetCmp(B, mm, tmp);
-/*
-    Q_SetLen(A, mm, 1);
-    Q_SetEntry(A, mm, 0, m_s.mmv200, 1.);
-    tmp = 0.; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
-    V_SetCmp(B, mm, tmp);
-*/
+    if (SMOOTH_SOLUTION == 1) {
+        Q_SetLen(A, mm, 1);
+        Q_SetEntry(A, mm, 0, m_s.mmv200, 1.);
+        tmp = 0.; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
+        V_SetCmp(B, mm, tmp);
+    }
+    else {
+        Q_SetLen(A, mm, 2);
+        Q_SetEntry(A, mm, 0, m_s.mmv200, -1.);
+        Q_SetEntry(A, mm, 1, m_s.mmv20R, 1.);
+        tmp = 0; // +  t_c.tau6 * FUNC_2(tt, xx, yy);
+        V_SetCmp(B, mm, tmp);
+    }
+
     return mm;
 }

@@ -23,9 +23,9 @@ void param_dif (P_gas *p_d)
 {
     p_d->Segm_X = 2*M_PI;
     p_d->Segm_Y = 2*M_PI;
-    p_d->Segm_T = 10;
+    p_d->Segm_T = 1;
     p_d->mu = 0.1;
-    p_d->p_ro = 10;
+    p_d->p_ro = 1;
     p_d->omega = 1;
 
     return;
@@ -263,6 +263,7 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
                 }
 
             }
+           // printf("%d \n", m);
             ++mm;
         }
 

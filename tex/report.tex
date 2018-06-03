@@ -1,0 +1,583 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\geometry{top = 0.5in, left = 0.5in, right = 0.5in, bottom = 0.5in}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[dvips]{graphicx}
+%\graphicspath{{g/}}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\pagestyle{empty}
+%\usepackage[margin=1.5cm, nohead]{geometry}
+\renewcommand{\baselinestretch}{1.5}
+\setcounter{MaxMatrixCols}{20}
+
+\begin{document}
+
+\include{./problem}
+\include{./1_scheme_formula}
+
+\newpage
+Тесты для гладкого решения проводились на следующих функциях:
+\begin{align*}
+u_1 &= \sin x \sin y \, e^t \\
+u_2 &= \sin x \sin y \, e^{-t} \\
+g &= \cos x \sin y + t \\
+\rho &= e^g \\
+\end{align*}
+
+$\mu = 0,1$
+
+$||G - \log \rho ||_C$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 1.724239e-01& 1.319644e-01& 1.165274e-01\\ 
+40 & 1.341082e-01& 8.347367e-02& 6.546352e-02\\ 
+80 & 1.231899e-01& 5.675641e-02& 3.721350e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||G - \log \rho ||_{L_2}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 2.966894e-01& 2.254328e-01& 2.160762e-01\\ 
+40 & 2.213906e-01& 1.242924e-01& 1.109633e-01\\ 
+80 & 1.937623e-01& 7.665158e-02& 5.776485e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||G - \log \rho ||_{W_2^1}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 4.157127e-01& 3.172089e-01& 3.047600e-01\\ 
+40 & 3.099346e-01& 1.749753e-01& 1.565194e-01\\ 
+80 & 2.707725e-01& 1.079297e-01& 8.149345e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V1 - u1||_{C}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 1.835229e-01& 1.408794e-01& 1.294242e-01\\ 
+40 & 1.439555e-01& 8.318822e-02& 7.080424e-02\\ 
+80 & 1.260408e-01& 5.153788e-02& 3.888193e-02\\ 
+\hline 
+\end{tabular}
+
+\newpage
+$||V1 - u1||_{L_2}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 3.163454e-01& 2.231090e-01& 2.058928e-01\\ 
+40 & 2.376225e-01& 1.274094e-01& 1.080671e-01\\ 
+80 & 2.028830e-01& 7.995268e-02& 5.754616e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V1 - u1||_{W_2^1}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 4.467315e-01& 3.154377e-01& 2.911613e-01\\ 
+40 & 3.354736e-01& 1.801378e-01& 1.528213e-01\\ 
+80 & 2.863084e-01& 1.130413e-01& 8.137816e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V2 - u2||_{C}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 6.935326e-02& 4.938355e-02& 4.802751e-02\\ 
+40 & 5.839118e-02& 2.747951e-02& 2.536655e-02\\ 
+80 & 5.292937e-02& 1.754783e-02& 1.321329e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V2 - u2||_{L_2}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 1.731243e-01& 1.275389e-01& 1.196073e-01\\ 
+40 & 1.288752e-01& 7.273517e-02& 6.329542e-02\\ 
+80 & 1.097430e-01& 4.521936e-02& 3.369495e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V2 - u2||_{W_2^1}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 2.445440e-01& 1.803346e-01& 1.691445e-01\\ 
+40 & 1.819533e-01& 1.028443e-01& 8.951019e-02\\ 
+80 & 1.548603e-01& 6.393507e-02& 4.765032e-02\\ 
+\hline 
+\end{tabular}
+
+\newpage
+$\mu = 0,01$
+
+$||G - \log \rho ||_C$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 1.778039e-01& 1.073139e-01& 8.343375e-02\\ 
+40 & 1.552394e-01& 7.099682e-02& 4.674950e-02\\ 
+80 & 1.436987e-01& 5.206320e-02& 2.738282e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||G - \log \rho ||_{L_2}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 2.954388e-01& 2.155685e-01& 2.067912e-01\\ 
+40 & 2.302943e-01& 1.195706e-01& 1.057967e-01\\ 
+80 & 2.083809e-01& 7.575748e-02& 5.500631e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||G - \log \rho ||_{W_2^1}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 4.142137e-01& 3.035718e-01& 2.917586e-01\\ 
+40 & 3.222751e-01& 1.684537e-01& 1.492888e-01\\ 
+80 & 2.909565e-01& 1.067033e-01& 7.763397e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V1 - u1||_{C}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 1.847667e-01& 1.195220e-01& 1.085010e-01\\ 
+40 & 1.525383e-01& 7.006022e-02& 5.919644e-02\\ 
+80 & 1.428444e-01& 4.735157e-02& 3.294592e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V1 - u1||_{L_2}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 3.368712e-01& 2.277318e-01& 2.075963e-01\\ 
+40 & 2.558655e-01& 1.297671e-01& 1.071882e-01\\ 
+80 & 2.208923e-01& 8.300132e-02& 5.709806e-02\\ 
+\hline 
+\end{tabular}
+
+\newpage
+$||V1 - u1||_{W_2^1}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 4.757334e-01& 3.219692e-01& 2.935607e-01\\ 
+40 & 3.611642e-01& 1.834719e-01& 1.515742e-01\\ 
+80 & 3.116014e-01& 1.173464e-01& 8.074284e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V2 - u2||_{C}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 6.452129e-02& 5.248424e-02& 5.227693e-02\\ 
+40 & 5.719746e-02& 2.790375e-02& 2.718189e-02\\ 
+80 & 5.424733e-02& 1.815146e-02& 1.395062e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V2 - u2||_{L_2}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 1.744254e-01& 1.324204e-01& 1.264982e-01\\ 
+40 & 1.301602e-01& 7.343929e-02& 6.539326e-02\\ 
+80 & 1.131877e-01& 4.512547e-02& 3.423289e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V2 - u2||_{W_2^1}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 2.464513e-01& 1.872349e-01& 1.788885e-01\\ 
+40 & 1.838020e-01& 1.038418e-01& 9.247659e-02\\ 
+80 & 1.597288e-01& 6.380509e-02& 4.841103e-02\\ 
+\hline 
+\end{tabular}
+
+\newpage
+$\mu = 0,001$
+
+$||G - \log \rho ||_{C}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 1.824392e-01& 1.039725e-01& 7.919143e-02\\ 
+40 & 1.596432e-01& 6.936298e-02& 4.447979e-02\\ 
+80 & 1.479970e-01& 5.142808e-02& 2.621743e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||G - \log \rho ||_{L_2}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 2.974286e-01& 2.158474e-01& 2.068664e-01\\ 
+40 & 2.327748e-01& 1.197988e-01& 1.058580e-01\\ 
+80 & 2.111965e-01& 7.608498e-02& 5.504883e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||G - \log \rho ||_{W_2^1}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 4.170117e-01& 3.039862e-01& 2.918750e-01\\ 
+40 & 3.257219e-01& 1.687875e-01& 1.493818e-01\\ 
+80 & 2.948599e-01& 1.071674e-01& 7.769763e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V1 - u1||_{C}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 1.854075e-01& 1.174659e-01& 1.074738e-01\\ 
+40 & 1.544237e-01& 6.973142e-02& 5.828758e-02\\ 
+80 & 1.452145e-01& 4.747507e-02& 3.238526e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V1 - u1||_{L_2}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 3.413731e-01& 2.312294e-01& 2.114104e-01\\ 
+40 & 2.587793e-01& 1.312795e-01& 1.087149e-01\\ 
+80 & 2.233507e-01& 8.384592e-02& 5.776683e-02\\ 
+\hline 
+\end{tabular}
+
+\newpage
+$||V1 - u1||_{W_2^1}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 4.820936e-01& 3.269123e-01& 2.989441e-01\\ 
+40 & 3.652663e-01& 1.856096e-01& 1.537292e-01\\ 
+80 & 3.150505e-01& 1.185383e-01& 8.168715e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V2 - u2||_{C}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 6.435777e-02& 5.318733e-02& 5.299093e-02\\ 
+40 & 5.703496e-02& 2.822431e-02& 2.751209e-02\\ 
+80 & 5.472384e-02& 1.848110e-02& 1.410741e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V2 - u2||_{L_2}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 1.752351e-01& 1.338733e-01& 1.282582e-01\\ 
+40 & 1.305739e-01& 7.390590e-02& 6.605218e-02\\ 
+80 & 1.137202e-01& 4.528643e-02& 3.449008e-02\\ 
+\hline 
+\end{tabular}
+
+\vspace{1cm}
+$||V2 - u2||_{W_2^1}$
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 20& 40& 80\\ 
+\hline 
+20 & 2.476023e-01& 1.892884e-01& 1.813773e-01\\ 
+40 & 1.843900e-01& 1.045017e-01& 9.340837e-02\\ 
+80 & 1.604811e-01& 6.403317e-02& 4.877475e-02\\ 
+\hline 
+\end{tabular}
+
+\newpage
+
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/1.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/5.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/10.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/15.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/20.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/25.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/30.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/35.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/40.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/45.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/50.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/55.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/60.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/65.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/70.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/75.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/80.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/85.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/90.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{g/95.png}}
+\end{minipage}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/1.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/5.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/10.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/15.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/20.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/25.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/30.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/35.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/40.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/45.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/50.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/55.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/60.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/65.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/70.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/75.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/80.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/85.png}}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/90.png}}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=1\linewidth]{u1/95.png}}
+\end{minipage}
+\end{figure}
+
+\end{document}

@@ -5,7 +5,9 @@
 #include "residuals.h"
 #include "gnuploting.h"
 
-#define IT_max -1
+#define IT_max 1
+
+#define SOKOL 1
 
 void print_norms(FILE *f, double *norm, int it_max);
 
@@ -39,8 +41,10 @@ int main() {
 
     param_dif(&p_d);
 
-    clean_png ("g");
-    clean_png ("u1");
+    if (SMOOTH_SOLUTION != 1) {
+        clean_png("g");
+        clean_png("u1");
+    }
 
     k = 0;
     for (it_t = 1; it_t < deg2inx(it_max) + 1; it_t *= 2)
