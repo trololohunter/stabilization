@@ -20,6 +20,20 @@ case.h
 functions.h
 /home/vover/CLionProjects/untitled2/functions.h
 
+/home/vover/CLionProjects/untitled2/case_sokol.c
+gas_two.h
+/home/vover/CLionProjects/untitled2/gas_two.h
+laspack/itersolv.h
+/home/vover/CLionProjects/untitled2/laspack/itersolv.h
+functions.h
+/home/vover/CLionProjects/untitled2/functions.h
+case_sokol.h
+/home/vover/CLionProjects/untitled2/case_sokol.h
+
+/home/vover/CLionProjects/untitled2/case_sokol.h
+functions.h
+/home/vover/CLionProjects/untitled2/functions.h
+
 /home/vover/CLionProjects/untitled2/functions.c
 math.h
 -
@@ -51,6 +65,8 @@ functions.h
 /home/vover/CLionProjects/untitled2/functions.h
 gnuploting.h
 /home/vover/CLionProjects/untitled2/gnuploting.h
+case_sokol.h
+/home/vover/CLionProjects/untitled2/case_sokol.h
 
 /home/vover/CLionProjects/untitled2/gas_two.h
 math.h

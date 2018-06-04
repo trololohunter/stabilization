@@ -13,6 +13,8 @@
 #define zero_spl_t  20
 
 #define SMOOTH_SOLUTION 1
+#define SOKOL 1
+#define GAMMA 1.4
 
 typedef struct
 {
@@ -107,5 +109,6 @@ void param_MUM_const (MUM_const *MUM_c, P_she p_s, double GG, P_gas p_d);
 void param_MM_step (MM_step *MM_s, size_t mm, int n, int m);
 void Setka (int *st, P_she *p_s);
 void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d);
+void Sxema_Sokolov (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d);
 
 #endif //UNTITLED2_GAS_TWO_H

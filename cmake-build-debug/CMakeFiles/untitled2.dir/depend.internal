@@ -14,12 +14,26 @@ CMakeFiles/untitled2.dir/case.c.o
  /home/vover/CLionProjects/untitled2/laspack/precond.h
  /home/vover/CLionProjects/untitled2/laspack/qmatrix.h
  /home/vover/CLionProjects/untitled2/laspack/vector.h
+CMakeFiles/untitled2.dir/case_sokol.c.o
+ /home/vover/CLionProjects/untitled2/case_sokol.c
+ /home/vover/CLionProjects/untitled2/case_sokol.h
+ /home/vover/CLionProjects/untitled2/functions.h
+ /home/vover/CLionProjects/untitled2/gas_two.h
+ /home/vover/CLionProjects/untitled2/laspack/copyrght.h
+ /home/vover/CLionProjects/untitled2/laspack/eigenval.h
+ /home/vover/CLionProjects/untitled2/laspack/elcmp.h
+ /home/vover/CLionProjects/untitled2/laspack/itersolv.h
+ /home/vover/CLionProjects/untitled2/laspack/lastypes.h
+ /home/vover/CLionProjects/untitled2/laspack/precond.h
+ /home/vover/CLionProjects/untitled2/laspack/qmatrix.h
+ /home/vover/CLionProjects/untitled2/laspack/vector.h
 CMakeFiles/untitled2.dir/functions.c.o
  /home/vover/CLionProjects/untitled2/functions.c
  /home/vover/CLionProjects/untitled2/functions.h
  /home/vover/CLionProjects/untitled2/gas_two.h
 CMakeFiles/untitled2.dir/gas_two.c.o
  /home/vover/CLionProjects/untitled2/case.h
+ /home/vover/CLionProjects/untitled2/case_sokol.h
  /home/vover/CLionProjects/untitled2/functions.h
  /home/vover/CLionProjects/untitled2/gas_two.c
  /home/vover/CLionProjects/untitled2/gas_two.h

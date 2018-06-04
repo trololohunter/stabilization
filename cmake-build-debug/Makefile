@@ -150,6 +150,33 @@ case.c.s:
 	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/case.c.s
 .PHONY : case.c.s
 
+case_sokol.o: case_sokol.c.o
+
+.PHONY : case_sokol.o
+
+# target to build an object file
+case_sokol.c.o:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/case_sokol.c.o
+.PHONY : case_sokol.c.o
+
+case_sokol.i: case_sokol.c.i
+
+.PHONY : case_sokol.i
+
+# target to preprocess a source file
+case_sokol.c.i:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/case_sokol.c.i
+.PHONY : case_sokol.c.i
+
+case_sokol.s: case_sokol.c.s
+
+.PHONY : case_sokol.s
+
+# target to generate assembly for a file
+case_sokol.c.s:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/case_sokol.c.s
+.PHONY : case_sokol.c.s
+
 functions.o: functions.c.o
 
 .PHONY : functions.o
@@ -594,6 +621,9 @@ help:
 	@echo "... case.o"
 	@echo "... case.i"
 	@echo "... case.s"
+	@echo "... case_sokol.o"
+	@echo "... case_sokol.i"
+	@echo "... case_sokol.s"
 	@echo "... functions.o"
 	@echo "... functions.i"
 	@echo "... functions.s"

@@ -5,9 +5,8 @@
 #include "residuals.h"
 #include "gnuploting.h"
 
-#define IT_max 1
+#define IT_max 0
 
-#define SOKOL 1
 
 void print_norms(FILE *f, double *norm, int it_max);
 
@@ -22,7 +21,7 @@ int main() {
     double *V2;
     int *st;
     int it_sp, it_t, k;
-    int it_max = IT_max + 1;
+    int it_max = IT_max;
     double *nc_g, *nl2_g, *nw12_g, *nc_v1, *nl2_v1, *nw12_v1, *nc_v2, *nl2_v2, *nw12_v2;
     int deg = deg2inx(it_max+1);
     Norm_Step n_s;
@@ -60,22 +59,26 @@ int main() {
 
             Setka(st, &p_s);
 
-            Sxema(G, V1, V2, st, p_s, p_d);
+            if (SOKOL != 1) Sxema(G, V1, V2, st, p_s, p_d);
+            else Sxema_Sokolov(G, V1, V2, st, p_s, p_d);
 
             printf("asdfsdfa \n M_x = %d \n M_y = %d \n N   = %d \n", p_s.M_x, p_s.M_y, p_s.N);
 
             if (SMOOTH_SOLUTION == 1) {
-                residual_Ch(V1, V2, G, p_s, &n_s, u1, u2, g);
+                if (SOKOL != 1) residual_Ch(V1, V2, G, p_s, &n_s, u1, u2, g);
+                else residual_Ch_Sokol(V1, V2, G, p_s, &n_s, u1, u2, g);
                 nc_v1[k] = n_s.V1norm;
                 nc_v2[k] = n_s.V2norm;
                 nc_g[k] = n_s.Gnorm;
 
-                residual_L2h(V1, V2, G, p_s, &n_s, u1, u2, g);
+                if (SOKOL != 1) residual_L2h(V1, V2, G, p_s, &n_s, u1, u2, g);
+                else residual_L2h_Sokol(V1, V2, G, p_s, &n_s, u1, u2, g);
                 nl2_v1[k] = n_s.V1norm;
                 nl2_v2[k] = n_s.V2norm;
                 nl2_g[k] = n_s.Gnorm;
 
-                residual_W12(V1, V2, G, p_s, &n_s, u1, u2, g);
+                if (SOKOL != 1) residual_W12(V1, V2, G, p_s, &n_s, u1, u2, g);
+                else residual_W12_Sokol(V1, V2, G, p_s, &n_s, u1, u2, g);
                 nw12_v1[k] = n_s.V1norm;
                 nw12_v2[k] = n_s.V2norm;
                 nw12_g[k] = n_s.Gnorm;

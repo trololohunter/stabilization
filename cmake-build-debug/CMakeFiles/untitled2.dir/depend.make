@@ -14,11 +14,25 @@ CMakeFiles/untitled2.dir/case.c.o: ../laspack/precond.h
 CMakeFiles/untitled2.dir/case.c.o: ../laspack/qmatrix.h
 CMakeFiles/untitled2.dir/case.c.o: ../laspack/vector.h
 
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../case_sokol.c
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../case_sokol.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../functions.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../gas_two.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/copyrght.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/eigenval.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/elcmp.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/itersolv.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/lastypes.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/precond.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/qmatrix.h
+CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/vector.h
+
 CMakeFiles/untitled2.dir/functions.c.o: ../functions.c
 CMakeFiles/untitled2.dir/functions.c.o: ../functions.h
 CMakeFiles/untitled2.dir/functions.c.o: ../gas_two.h
 
 CMakeFiles/untitled2.dir/gas_two.c.o: ../case.h
+CMakeFiles/untitled2.dir/gas_two.c.o: ../case_sokol.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../functions.h
 CMakeFiles/untitled2.dir/gas_two.c.o: ../gas_two.c
 CMakeFiles/untitled2.dir/gas_two.c.o: ../gas_two.h

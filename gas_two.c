@@ -12,6 +12,7 @@
 #include "laspack/rtc.h"
 #include "functions.h"
 #include "gnuploting.h"
+#include "case_sokol.h"
 
 
 #define EPS 1e-8
@@ -183,11 +184,6 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
 
     if (SMOOTH_SOLUTION == 1) first_fill(V1, V2, G, p_s, p_d.omega, u1, u2, g);
     else first_fill___ (V1, V2, G, p_s, p_d.omega);
-/*
-    print_vector(G, p_s.Dim);
-    print_vector(V1, p_s.Dim);
-    print_vector(V2, p_s.Dim);
-*/
 
     param_t_const(&t_c, p_s, p_d);
     SetRTCAccuracy(EPS);
@@ -296,5 +292,166 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
 
 
     return;
+}
+
+void init_sokol_matrix (P_she p_s, QMatrix_L *H, QMatrix_L *U,
+                        Vector *b_H, Vector *b_U, Vector *Hnew, Vector *Unew)
+{
+    Q_Constr(H, "H", (size_t) p_s.M_x * p_s.M_y, False, Rowws, Normal, True);
+    Q_Constr(U, "U", (size_t) 2 * p_s.Dim, False, Rowws, Normal, True);
+
+    V_Constr(b_H, "b_H", (size_t) p_s.M_x * p_s.M_y, Normal, True);
+    V_Constr(b_U, "b_U", (size_t) 2 * p_s.Dim, Normal, True);
+    V_Constr(Hnew, "Hnew", (size_t) p_s.M_x * p_s.M_y, Normal, True);
+    V_Constr(Unew, "Unew", (size_t) 2 * p_s.Dim, Normal, True);
+}
+
+void distr_sokol_matrix (QMatrix_L *H, QMatrix_L *U,
+                         Vector *b_H, Vector *b_U, Vector *Hnew, Vector *Unew)
+{
+    Q_Destr(H);
+    Q_Destr(U);
+
+    V_Destr(b_H);
+    V_Destr(b_U);
+    V_Destr(Hnew);
+    V_Destr(Unew);
+}
+
+void Sxema_Sokolov (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
+{
+    QMatrix_L H, U;
+    Vector Hnew, b_H, b_U, Unew;
+
+    T_const t_c;
+    size_t mm;
+    int time_step, m;
+
+    double *Hnew_;
+
+    Hnew_ = (double*) malloc(p_s.M_x * p_s.M_y * sizeof(double));
+
+    if (SMOOTH_SOLUTION == 1) first_fill_sokol(V1, V2, G, p_s, p_d.omega, u1, u2, g);
+    else first_fill_sokol___ (V1, V2, G, p_s, p_d.omega);
+
+    param_t_const(&t_c, p_s, p_d);
+    SetRTCAccuracy(EPS);
+
+    for (time_step = 1; time_step < p_s.N + 1; ++time_step)
+    {
+        init_sokol_matrix(p_s, &H, &U, &b_H, &b_U, &Hnew, &Unew);
+
+        for (mm = 1; mm < p_s.M_x * p_s.M_y; ++mm)
+        {
+            case_sokol_H (&H, &b_H, t_c, time_step, V1, V2, G, mm, p_s, p_d.mu, p_d.p_ro);
+        }
+
+        CGSIter(&H, &Hnew, &b_H, MAX_ITER, SSORPrecond, 1);
+
+        for (size_t i = 0; i < p_s.M_x * p_s.M_y; ++i)
+        {
+            Hnew_[i] = V_GetCmp(&Hnew, i + 1);
+        }
+
+        mm = 1;
+        for (m = 0; m < p_s.Dim; ++m)
+        {
+            switch (st[m])
+            {
+                case 0:
+                    //mm = case0_sokol(&A, &b, t_c, m_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, p_d.p_ro, mm);
+                    case0_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm, p_d.p_ro);
+                    break;
+                case 1:
+                    //mm = case1_sokol(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    case1_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm);
+                    break;
+                case 2:
+                    //mm = case2_sokol(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    case2_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm);
+                    break;
+                case 3:
+                    //mm = case3_sokol(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm, p_d.omega);
+                    case3_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm, p_d.omega);
+                    break;
+                case 4:
+                    //mm = case4_sokol(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    case4_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm);
+                    break;
+                case 5:
+                    //mm = case1_sokol(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    case1_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm);
+                    break;
+                case 6:
+                    //mm = case2(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    case2_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm);
+                    break;
+                case 7:
+                    //mm = case1(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    case1_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm);
+                    break;
+                case 8:
+                    //mm = case2(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    case2_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm);
+                    break;
+                case 9:
+                    //mm = case9(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    case9_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm);
+                    break;
+                case 10:
+                    //mm = case10(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    case10_sokol_V(&U, &b_U, t_c, time_step,
+                                  V1, V2, G, Hnew_, m, p_s, p_d.mu, mm);
+                    break;
+                default:
+                {
+                    printf("FATAL ERROR: unknown type of node");
+                    exit(1);
+                }
+
+            }
+            // printf("%d \n", m);
+            mm += 2;
+        }
+
+        CGSIter(&U, &Unew, &b_U, MAX_ITER, SSORPrecond, 1);
+
+        for (size_t i = 0; i < p_s.Dim; ++i)
+        {
+            V1[i] = V_GetCmp(&Unew, 2 * i + 1);
+            V2[i] = V_GetCmp(&Unew, 2 * i + 2);
+        }
+
+        for (size_t i = 0; i < p_s.M_x * p_s.M_y; ++i)
+        {
+            G[i] = Hnew_[i];
+        }
+
+        for (m = 0; m < p_s.Dim; ++m)
+        {
+            if (fabs(G[m])  < EEPPSS ) G[m] = 0;
+            if (fabs(V1[m]) < EEPPSS ) V1[m] = 0;
+            if (fabs(V2[m]) < EEPPSS ) V2[m] = 0;
+        }
+        usleep(10);
+
+        if (SMOOTH_SOLUTION != 1)
+            run_gnuplot(p_s, V1, V2, G, time_step);
+
+        distr_sokol_matrix(&H, &U, &b_H, &b_U, &Hnew, &Unew);
+    }
+
+    free(Hnew_);
+
 }
 

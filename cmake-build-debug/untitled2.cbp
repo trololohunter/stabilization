@@ -90,6 +90,12 @@
 		<Unit filename="/home/vover/CLionProjects/untitled2/case.h">
 			<Option target="untitled2"/>
 		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/case_sokol.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/case_sokol.h">
+			<Option target="untitled2"/>
+		</Unit>
 		<Unit filename="/home/vover/CLionProjects/untitled2/functions.c">
 			<Option target="untitled2"/>
 		</Unit>
