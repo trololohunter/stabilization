@@ -6,6 +6,7 @@
 #include "laspack/itersolv.h"
 #include "functions.h"
 #include "case.h"
+#include "harmonic_help.h"
 
 typedef struct
 {
@@ -213,11 +214,22 @@ void first_fill(double *V1, double *V2, double *G, P_she p_s, double w, func u1,
             V1[i * (p_s.M_x + 1) + j] = u1(0, j * p_s.h_x, i * p_s.h_y);
             V2[i * (p_s.M_x + 1) + j] = u2(0, j * p_s.h_x, i * p_s.h_y);
             G[i * (p_s.M_x + 1) + j] = ro(0, j * p_s.h_x, i * p_s.h_y);
-            if (i > 0 && i < (p_s.M_y/2) && j == p_s.M_x/2)
+            /*if (i > 0 && i < (p_s.M_y/2) && j == p_s.M_x/2)
             {
                 V1[i * (p_s.M_x + 1) + j] = 0;
                 V2[i * (p_s.M_x + 1) + j] = 0;
+            }*/
+            if (WALL) {
+                if (i == p_s.M_y / 2 && j > p_s.M_x / 2 && j < p_s.M_x + 1) {
+                    V1[i * (p_s.M_x + 1) + j] = 0;
+                    V2[i * (p_s.M_x + 1) + j] = sin(j * p_s.h_x);
+                }
             }
+            else if (i == p_s.M_y / 2 && j > 0 && j < p_s.M_x + 1) {
+                V1[i * (p_s.M_x + 1) + j] = 0;
+                V2[i * (p_s.M_x + 1) + j] = sin(j * p_s.h_x / 2);
+            }
+
         }
     //for (j = 1; j < p_s.M_x/2; ++j)
     //V2[j] = w;

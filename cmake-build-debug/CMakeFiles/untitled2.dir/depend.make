@@ -5,6 +5,7 @@ CMakeFiles/untitled2.dir/case.c.o: ../case.c
 CMakeFiles/untitled2.dir/case.c.o: ../case.h
 CMakeFiles/untitled2.dir/case.c.o: ../functions.h
 CMakeFiles/untitled2.dir/case.c.o: ../gas_two.h
+CMakeFiles/untitled2.dir/case.c.o: ../harmonic_help.h
 CMakeFiles/untitled2.dir/case.c.o: ../laspack/copyrght.h
 CMakeFiles/untitled2.dir/case.c.o: ../laspack/eigenval.h
 CMakeFiles/untitled2.dir/case.c.o: ../laspack/elcmp.h
@@ -51,6 +52,27 @@ CMakeFiles/untitled2.dir/gas_two.c.o: ../residuals.h
 CMakeFiles/untitled2.dir/gnuploting.c.o: ../gas_two.h
 CMakeFiles/untitled2.dir/gnuploting.c.o: ../gnuploting.c
 CMakeFiles/untitled2.dir/gnuploting.c.o: ../gnuploting.h
+
+CMakeFiles/untitled2.dir/harmonic.c.o: ../case.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../functions.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../gas_two.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../harmonic.c
+CMakeFiles/untitled2.dir/harmonic.c.o: ../harmonic_help.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/copyrght.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/eigenval.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/elcmp.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/itersolv.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/lastypes.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/precond.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/qmatrix.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/rtc.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/vector.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../residuals.h
+
+CMakeFiles/untitled2.dir/harmonic_help.c.o: ../functions.h
+CMakeFiles/untitled2.dir/harmonic_help.c.o: ../gas_two.h
+CMakeFiles/untitled2.dir/harmonic_help.c.o: ../harmonic_help.c
+CMakeFiles/untitled2.dir/harmonic_help.c.o: ../harmonic_help.h
 
 CMakeFiles/untitled2.dir/laspack/eigenval.c.o: ../laspack/copyrght.h
 CMakeFiles/untitled2.dir/laspack/eigenval.c.o: ../laspack/eigenval.c
@@ -171,6 +193,7 @@ CMakeFiles/untitled2.dir/laspack/vector.c.o: ../laspack/vector.h
 CMakeFiles/untitled2.dir/main.c.o: ../functions.h
 CMakeFiles/untitled2.dir/main.c.o: ../gas_two.h
 CMakeFiles/untitled2.dir/main.c.o: ../gnuploting.h
+CMakeFiles/untitled2.dir/main.c.o: ../harmonic.h
 CMakeFiles/untitled2.dir/main.c.o: ../main.c
 CMakeFiles/untitled2.dir/main.c.o: ../residuals.h
 

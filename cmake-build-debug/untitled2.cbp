@@ -114,6 +114,18 @@
 		<Unit filename="/home/vover/CLionProjects/untitled2/gnuploting.h">
 			<Option target="untitled2"/>
 		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/harmonic.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/harmonic.h">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/harmonic_help.c">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="/home/vover/CLionProjects/untitled2/harmonic_help.h">
+			<Option target="untitled2"/>
+		</Unit>
 		<Unit filename="/home/vover/CLionProjects/untitled2/laspack/eigenval.c">
 			<Option target="untitled2"/>
 		</Unit>

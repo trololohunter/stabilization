@@ -4,6 +4,7 @@
 #include "gas_two.h"
 #include "residuals.h"
 #include "gnuploting.h"
+#include "harmonic.h"
 
 #define IT_max 0
 
@@ -13,8 +14,8 @@ void print_norms(FILE *f, double *norm, int it_max);
 int deg2inx (int x);
 
 int main() {
-
-    P_gas p_d;
+    solve();
+/*    P_gas p_d;
     P_she p_s;
     double *G;
     double *V1;
@@ -40,10 +41,10 @@ int main() {
 
     param_dif(&p_d);
 
-    if (SMOOTH_SOLUTION != 1) {
+    //if (SMOOTH_SOLUTION != 1) {
         clean_png("g");
         clean_png("u1");
-    }
+    //}
 
     k = 0;
     for (it_t = 1; it_t < deg2inx(it_max) + 1; it_t *= 2)
@@ -116,7 +117,7 @@ int main() {
     free(nw12_g);
     free(nw12_v1);
     free(nw12_v2);
-
+*/
     return 0;
 }
 
@@ -126,6 +127,7 @@ int deg2inx (int x)
     int ans = 1;
 
     if (x < 0) return 0;
+    if (x == 0) return 1;
     if (x == 1) return 2;
     for (i = 1; i < x+1; ++i)
         ans *= 2;

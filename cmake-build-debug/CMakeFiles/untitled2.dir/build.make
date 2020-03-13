@@ -489,6 +489,54 @@ CMakeFiles/untitled2.dir/case_sokol.c.o.provides: CMakeFiles/untitled2.dir/case_
 CMakeFiles/untitled2.dir/case_sokol.c.o.provides.build: CMakeFiles/untitled2.dir/case_sokol.c.o
 
 
+CMakeFiles/untitled2.dir/harmonic_help.c.o: CMakeFiles/untitled2.dir/flags.make
+CMakeFiles/untitled2.dir/harmonic_help.c.o: ../harmonic_help.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/untitled2.dir/harmonic_help.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled2.dir/harmonic_help.c.o   -c /home/vover/CLionProjects/untitled2/harmonic_help.c
+
+CMakeFiles/untitled2.dir/harmonic_help.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled2.dir/harmonic_help.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vover/CLionProjects/untitled2/harmonic_help.c > CMakeFiles/untitled2.dir/harmonic_help.c.i
+
+CMakeFiles/untitled2.dir/harmonic_help.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled2.dir/harmonic_help.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vover/CLionProjects/untitled2/harmonic_help.c -o CMakeFiles/untitled2.dir/harmonic_help.c.s
+
+CMakeFiles/untitled2.dir/harmonic_help.c.o.requires:
+
+.PHONY : CMakeFiles/untitled2.dir/harmonic_help.c.o.requires
+
+CMakeFiles/untitled2.dir/harmonic_help.c.o.provides: CMakeFiles/untitled2.dir/harmonic_help.c.o.requires
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/harmonic_help.c.o.provides.build
+.PHONY : CMakeFiles/untitled2.dir/harmonic_help.c.o.provides
+
+CMakeFiles/untitled2.dir/harmonic_help.c.o.provides.build: CMakeFiles/untitled2.dir/harmonic_help.c.o
+
+
+CMakeFiles/untitled2.dir/harmonic.c.o: CMakeFiles/untitled2.dir/flags.make
+CMakeFiles/untitled2.dir/harmonic.c.o: ../harmonic.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/untitled2.dir/harmonic.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled2.dir/harmonic.c.o   -c /home/vover/CLionProjects/untitled2/harmonic.c
+
+CMakeFiles/untitled2.dir/harmonic.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled2.dir/harmonic.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vover/CLionProjects/untitled2/harmonic.c > CMakeFiles/untitled2.dir/harmonic.c.i
+
+CMakeFiles/untitled2.dir/harmonic.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled2.dir/harmonic.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vover/CLionProjects/untitled2/harmonic.c -o CMakeFiles/untitled2.dir/harmonic.c.s
+
+CMakeFiles/untitled2.dir/harmonic.c.o.requires:
+
+.PHONY : CMakeFiles/untitled2.dir/harmonic.c.o.requires
+
+CMakeFiles/untitled2.dir/harmonic.c.o.provides: CMakeFiles/untitled2.dir/harmonic.c.o.requires
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/harmonic.c.o.provides.build
+.PHONY : CMakeFiles/untitled2.dir/harmonic.c.o.provides
+
+CMakeFiles/untitled2.dir/harmonic.c.o.provides.build: CMakeFiles/untitled2.dir/harmonic.c.o
+
+
 # Object files for target untitled2
 untitled2_OBJECTS = \
 "CMakeFiles/untitled2.dir/main.c.o" \
@@ -508,7 +556,9 @@ untitled2_OBJECTS = \
 "CMakeFiles/untitled2.dir/laspack/precond.c.o" \
 "CMakeFiles/untitled2.dir/laspack/rtc.c.o" \
 "CMakeFiles/untitled2.dir/gnuploting.c.o" \
-"CMakeFiles/untitled2.dir/case_sokol.c.o"
+"CMakeFiles/untitled2.dir/case_sokol.c.o" \
+"CMakeFiles/untitled2.dir/harmonic_help.c.o" \
+"CMakeFiles/untitled2.dir/harmonic.c.o"
 
 # External object files for target untitled2
 untitled2_EXTERNAL_OBJECTS =
@@ -531,9 +581,11 @@ untitled2: CMakeFiles/untitled2.dir/laspack/precond.c.o
 untitled2: CMakeFiles/untitled2.dir/laspack/rtc.c.o
 untitled2: CMakeFiles/untitled2.dir/gnuploting.c.o
 untitled2: CMakeFiles/untitled2.dir/case_sokol.c.o
+untitled2: CMakeFiles/untitled2.dir/harmonic_help.c.o
+untitled2: CMakeFiles/untitled2.dir/harmonic.c.o
 untitled2: CMakeFiles/untitled2.dir/build.make
 untitled2: CMakeFiles/untitled2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C executable untitled2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vover/CLionProjects/untitled2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking C executable untitled2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -559,6 +611,8 @@ CMakeFiles/untitled2.dir/requires: CMakeFiles/untitled2.dir/laspack/precond.c.o.
 CMakeFiles/untitled2.dir/requires: CMakeFiles/untitled2.dir/laspack/rtc.c.o.requires
 CMakeFiles/untitled2.dir/requires: CMakeFiles/untitled2.dir/gnuploting.c.o.requires
 CMakeFiles/untitled2.dir/requires: CMakeFiles/untitled2.dir/case_sokol.c.o.requires
+CMakeFiles/untitled2.dir/requires: CMakeFiles/untitled2.dir/harmonic_help.c.o.requires
+CMakeFiles/untitled2.dir/requires: CMakeFiles/untitled2.dir/harmonic.c.o.requires
 
 .PHONY : CMakeFiles/untitled2.dir/requires
 

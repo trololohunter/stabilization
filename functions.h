@@ -23,5 +23,8 @@ double Func_0 (double t, double x, double y);
 double g (double t, double x, double y);
 double u1 (double t, double x, double y);
 double u2 (double t, double x, double y);
+double u (double coeff, double x, double y, int m, int n);
+double v (double coeff, double x, double y, int m, int n);
+double p (double coeff, double x, double y, int m, int n);
 
 #endif //UNTITLED2_FUNCTIONS_H

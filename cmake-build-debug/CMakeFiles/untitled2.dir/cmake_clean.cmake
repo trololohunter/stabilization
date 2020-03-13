@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled2.dir/laspack/rtc.c.o"
   "CMakeFiles/untitled2.dir/gnuploting.c.o"
   "CMakeFiles/untitled2.dir/case_sokol.c.o"
+  "CMakeFiles/untitled2.dir/harmonic_help.c.o"
+  "CMakeFiles/untitled2.dir/harmonic.c.o"
   "untitled2.pdb"
   "untitled2"
 )

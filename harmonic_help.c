@@ -4,8 +4,9 @@
 
 #include <malloc.h>
 #include "math.h"
-#include "harmonic.h"
+#include "harmonic_help.h"
 #include "gas_two.h"
+#include "functions.h"
 
 void phi_mn_sin_cos (double *phi, int m, int n, P_she p_s){
 
@@ -106,28 +107,40 @@ void eigenvalue_mn (eigenvalue *eval, P_gas p_g, int m, int n){
 
     return;
 }
-void eigenvector_mn (eigenvector *eval, P_gas p_g, int m, int n){
+void eigenvector_mn (eigenvector *evec, P_gas p_g, int m, int n){
 
     double W = sqrt(- 9 * C_ro_0 * m * m * ro_0 * ro_0
                     - 9 * C_ro_0 * m * n * ro_0 * ro_0
                     + m*m*m*m*p_g.mu*p_g.mu
                     + 2*m*m*n*n*p_g.mu*p_g.mu
                     + n*n*n*n*p_g.mu*p_g.mu);
-    eval->v1[0] = 0;
-    eval->v1[1] = - n/m;
-    eval->v1[2] = 1;
-    eval->v2[0] = (m*m*p_g.mu + 2*n*n*p_g.mu + 2 * W) / (6 * C_ro_0 * m)
+    evec->v1[0] = 0;
+    evec->v1[1] = - n/m;
+    evec->v1[2] = 1;
+    evec->v2[0] = (m*m*p_g.mu + 2*n*n*p_g.mu + 2 * W) / (6 * C_ro_0 * m)
                  - n*p_g.mu*(-m*m*p_g.mu + m*n*p_g.mu - 2*n*n*p_g.mu - 2*W)
                / (6 * C_ro_0 * (2*m*m*p_g.mu - m*n*p_g.mu + n*n*p_g.mu + 2*W ));
-    eval->v2[1] = (m*m*p_g.mu - m*n*p_g.mu + 2*n*n*p_g.mu + 2*W)
+    evec->v2[1] = (m*m*p_g.mu - m*n*p_g.mu + 2*n*n*p_g.mu + 2*W)
                   / (2*m*m*p_g.mu - n*m*p_g.mu + n*n*p_g.mu + 2*W);
-    eval->v2[2] = 1;
-    eval->v3[0] = (m*m*p_g.mu + 2*n*n*p_g.mu - 2 * W) / (6 * C_ro_0 * m)
+    evec->v2[2] = 1;
+    evec->v3[0] = (m*m*p_g.mu + 2*n*n*p_g.mu - 2 * W) / (6 * C_ro_0 * m)
                   - n*p_g.mu*(m*m*p_g.mu - m*n*p_g.mu + 2*n*n*p_g.mu - 2*W)
                     / (6 * C_ro_0 * (-2*m*m*p_g.mu + m*n*p_g.mu - n*n*p_g.mu + 2*W ));
-    eval->v3[1] = (m*m*p_g.mu - m*n*p_g.mu + 2*n*n*p_g.mu - 2*W)
+    evec->v3[1] = (m*m*p_g.mu - m*n*p_g.mu + 2*n*n*p_g.mu - 2*W)
                   / (2*m*m*p_g.mu - n*m*p_g.mu + n*n*p_g.mu - 2*W);
-    eval->v3[2] = 1;
+    evec->v3[2] = 1;
 
+    return;
+}
+
+void fill_with_vector (double *G, double *V1, double *V2, P_she p_s, int m, int n, double vector[N_])
+{
+    int i, j;
+    for (i = 0; i < p_s.M_y + 1; ++i)
+        for (j = 0; j < p_s.M_x + 1; ++j) {
+            V1[i * (p_s.M_x + 1) + j] = u(vector[0], j * p_s.h_x, i * p_s.h_y, m, n);
+            V2[i * (p_s.M_x + 1) + j] = v(vector[1], j * p_s.h_x, i * p_s.h_y, m, n);
+             G[i * (p_s.M_x + 1) + j] = p(vector[2], j * p_s.h_x, i * p_s.h_y, m, n);
+        }
     return;
 }

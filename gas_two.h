@@ -8,13 +8,14 @@
 #include <math.h>
 #include <glob.h>
 
-#define zero_spl_x  20 //zero splitting x
-#define zero_spl_y  20
-#define zero_spl_t  20
+#define zero_spl_x  30 //zero splitting x
+#define zero_spl_y  30
+#define zero_spl_t  200
 
 #define SMOOTH_SOLUTION 1
-#define SOKOL 1
+#define SOKOL 0
 #define GAMMA 1.4
+#define WALL 0
 
 typedef struct
 {

@@ -2,72 +2,72 @@
 
 \begin{tabular}{c r r r r}
 \hline 
-N \texttt{\char`\\} M & 20\\ 
+N \texttt{\char`\\} M & 80\\ 
 \hline 
-20 & 2.822708e+00\\ 
-\hline 
-\end{tabular}
-
-\begin{tabular}{c r r r r}
-\hline 
-N \texttt{\char`\\} M & 20\\ 
-\hline 
-20 & 9.997237e+00\\ 
+200 & 3.486462e-03\\ 
 \hline 
 \end{tabular}
 
 \begin{tabular}{c r r r r}
 \hline 
-N \texttt{\char`\\} M & 20\\ 
+N \texttt{\char`\\} M & 80\\ 
 \hline 
-20 & 1.413823e+01\\ 
-\hline 
-\end{tabular}
-
-\begin{tabular}{c r r r r}
-\hline 
-N \texttt{\char`\\} M & 20\\ 
-\hline 
-20 & 2.718282e+00\\ 
+200 & 1.226225e-02\\ 
 \hline 
 \end{tabular}
 
 \begin{tabular}{c r r r r}
 \hline 
-N \texttt{\char`\\} M & 20\\ 
+N \texttt{\char`\\} M & 80\\ 
 \hline 
-20 & 8.539734e+00\\ 
-\hline 
-\end{tabular}
-
-\begin{tabular}{c r r r r}
-\hline 
-N \texttt{\char`\\} M & 20\\ 
-\hline 
-20 & 1.209142e+01\\ 
+200 & 1.725241e-02\\ 
 \hline 
 \end{tabular}
 
 \begin{tabular}{c r r r r}
 \hline 
-N \texttt{\char`\\} M & 20\\ 
+N \texttt{\char`\\} M & 80\\ 
 \hline 
-20 & 3.678794e-01\\ 
-\hline 
-\end{tabular}
-
-\begin{tabular}{c r r r r}
-\hline 
-N \texttt{\char`\\} M & 20\\ 
-\hline 
-20 & 1.155727e+00\\ 
+200 & 3.411485e-04\\ 
 \hline 
 \end{tabular}
 
 \begin{tabular}{c r r r r}
 \hline 
-N \texttt{\char`\\} M & 20\\ 
+N \texttt{\char`\\} M & 80\\ 
 \hline 
-20 & 1.636395e+00\\ 
+200 & 1.025884e-03\\ 
+\hline 
+\end{tabular}
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 80\\ 
+\hline 
+200 & 1.450432e-03\\ 
+\hline 
+\end{tabular}
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 80\\ 
+\hline 
+200 & 2.541415e-03\\ 
+\hline 
+\end{tabular}
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 80\\ 
+\hline 
+200 & 9.731333e-03\\ 
+\hline 
+\end{tabular}
+
+\begin{tabular}{c r r r r}
+\hline 
+N \texttt{\char`\\} M & 80\\ 
+\hline 
+200 & 1.376212e-02\\ 
 \hline 
 \end{tabular}

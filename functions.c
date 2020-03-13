@@ -199,19 +199,34 @@ double rhs_f2_test_pop (double t, double x1, double x2, double mu, double p_ro)
 
 }
 */
+
+double u (double coeff, double x, double y, int m, int n)
+{
+    return sin(m*x/2) * cos(n*y/2) * coeff;
+}
+
+double v (double coeff, double x, double y, int m, int n)
+{
+    return cos(m*x/2) * sin(n*y/2) * coeff;
+}
+
+double p (double coeff, double x, double y, int m, int n)
+{
+    return cos(m*x/2) * cos(n*y/2) * coeff;
+}
+
 double u1 (double t, double x, double y)
 {
-
-    double res = sin (x) * sin (y) * exp (t);
-    return res;
+    //double res = sin (x) * sin (y) * exp (t);
+    //return res;
+    return 0;
 }
 
 double u2 (double t, double x, double y)
 {
-
-
-    double res = sin (x) * sin (y) * exp (-t);
-    return res;
+    //double res = sin (x) * sin (y) * exp (-t);
+    //return res;
+    return 0;
 }
 
 double rho (double t, double x, double y)
@@ -224,7 +239,7 @@ double rho (double t, double x, double y)
 
 double g (double t, double x, double y)
 {
-
+    return 1;
     double res = (cos (x) + 3./2.) * (sin (y) + 3./2.);
     res = log (res);
     res += t;
@@ -269,7 +284,6 @@ double du1_dt (double t, double x, double y)
 
 double du1_dx (double t, double x, double y)
 {
-
 
     double res = cos (x) * sin (y) * exp (t);
     return res;
@@ -362,6 +376,7 @@ double du1u2_dy (double t, double x, double y)
 
 double Func_0 (double t, double x, double y)
 {
+    return 0;
     if (SMOOTH_SOLUTION != 1) return 0;
     double tmp = 2 - g (t, x, y);
     double res =
@@ -380,6 +395,7 @@ double Func_0 (double t, double x, double y)
 
 double Func_1 (double t, double x, double y, double p_rho, double mu)
 {
+    return 0;
     if (SMOOTH_SOLUTION != 1) return 0;
     double res =
             + du1_dt (t, x, y)
@@ -398,6 +414,7 @@ double Func_1 (double t, double x, double y, double p_rho, double mu)
 
 double Func_2 (double t, double x, double y, double p_rho, double mu)
 {
+    return 0;
     if (SMOOTH_SOLUTION != 1) return 0;
     double res =
             + du2_dt (t, x, y)

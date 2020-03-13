@@ -33,6 +33,8 @@ double coefficient_Cmn (double *u, P_she p_s, int m, int n);
 double coefficient_Dmn (double *v, P_she p_s, int m, int n);
 double coefficient_Pmn (double *p, P_she p_s, int m, int n);
 void eigenvalue_mn (eigenvalue *eval, P_gas p_g, int m, int n);
-void eigenvector_mn (eigenvector *eval, P_gas p_g, int m, int n);
+void eigenvector_mn (eigenvector *evec, P_gas p_g, int m, int n);
+void fill_with_vector (double *G, double *V1, double *V2, P_she p_s, int m, int n, double vector[N_]);
+
 
 #endif //UNTITLED2_HARMONIC_H

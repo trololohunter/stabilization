@@ -6,6 +6,7 @@ CMakeFiles/untitled2.dir/case.c.o
  /home/vover/CLionProjects/untitled2/case.h
  /home/vover/CLionProjects/untitled2/functions.h
  /home/vover/CLionProjects/untitled2/gas_two.h
+ /home/vover/CLionProjects/untitled2/harmonic_help.h
  /home/vover/CLionProjects/untitled2/laspack/copyrght.h
  /home/vover/CLionProjects/untitled2/laspack/eigenval.h
  /home/vover/CLionProjects/untitled2/laspack/elcmp.h
@@ -52,6 +53,27 @@ CMakeFiles/untitled2.dir/gnuploting.c.o
  /home/vover/CLionProjects/untitled2/gas_two.h
  /home/vover/CLionProjects/untitled2/gnuploting.c
  /home/vover/CLionProjects/untitled2/gnuploting.h
+CMakeFiles/untitled2.dir/harmonic.c.o
+ /home/vover/CLionProjects/untitled2/case.h
+ /home/vover/CLionProjects/untitled2/functions.h
+ /home/vover/CLionProjects/untitled2/gas_two.h
+ /home/vover/CLionProjects/untitled2/harmonic.c
+ /home/vover/CLionProjects/untitled2/harmonic_help.h
+ /home/vover/CLionProjects/untitled2/laspack/copyrght.h
+ /home/vover/CLionProjects/untitled2/laspack/eigenval.h
+ /home/vover/CLionProjects/untitled2/laspack/elcmp.h
+ /home/vover/CLionProjects/untitled2/laspack/itersolv.h
+ /home/vover/CLionProjects/untitled2/laspack/lastypes.h
+ /home/vover/CLionProjects/untitled2/laspack/precond.h
+ /home/vover/CLionProjects/untitled2/laspack/qmatrix.h
+ /home/vover/CLionProjects/untitled2/laspack/rtc.h
+ /home/vover/CLionProjects/untitled2/laspack/vector.h
+ /home/vover/CLionProjects/untitled2/residuals.h
+CMakeFiles/untitled2.dir/harmonic_help.c.o
+ /home/vover/CLionProjects/untitled2/functions.h
+ /home/vover/CLionProjects/untitled2/gas_two.h
+ /home/vover/CLionProjects/untitled2/harmonic_help.c
+ /home/vover/CLionProjects/untitled2/harmonic_help.h
 CMakeFiles/untitled2.dir/laspack/eigenval.c.o
  /home/vover/CLionProjects/untitled2/laspack/copyrght.h
  /home/vover/CLionProjects/untitled2/laspack/eigenval.c
@@ -172,6 +194,7 @@ CMakeFiles/untitled2.dir/main.c.o
  /home/vover/CLionProjects/untitled2/functions.h
  /home/vover/CLionProjects/untitled2/gas_two.h
  /home/vover/CLionProjects/untitled2/gnuploting.h
+ /home/vover/CLionProjects/untitled2/harmonic.h
  /home/vover/CLionProjects/untitled2/main.c
  /home/vover/CLionProjects/untitled2/residuals.h
 CMakeFiles/untitled2.dir/residuals.c.o

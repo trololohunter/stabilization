@@ -24,7 +24,7 @@ void param_dif (P_gas *p_d)
 {
     p_d->Segm_X = 2*M_PI;
     p_d->Segm_Y = 2*M_PI;
-    p_d->Segm_T = 1;
+    p_d->Segm_T = 20;
     p_d->mu = 0.1;
     p_d->p_ro = 1;
     p_d->omega = 1;
@@ -175,12 +175,15 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
     T_const t_c;
     MUM_const m_c;
     MM_step m_s;
+    Norm_Step n_s;
 
     double GG = 0;
     double tmp;
     size_t mm;
     int m;
+    FILE *fp;
 
+    fp = fopen ("norma.txt","w");
 
     if (SMOOTH_SOLUTION == 1) first_fill(V1, V2, G, p_s, p_d.omega, u1, u2, g);
     else first_fill___ (V1, V2, G, p_s, p_d.omega);
@@ -188,6 +191,7 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
     param_t_const(&t_c, p_s, p_d);
     SetRTCAccuracy(EPS);
 
+    run_gnuplot(p_s, V1, V2, G, 0);
 
     for (k = 1; k < p_s.N + 1; ++k)
     {
@@ -203,7 +207,7 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
 //            printf("%lf \n", GG);
             if (exp(-G[m]) > GG) GG = exp(-G[m]);
         }
-        printf("%lf \n", GG);
+        //printf("%lf \n", GG);
         param_MUM_const(&m_c, p_s, GG, p_d);
 
         for (size_t i = 0; i < p_s.Dim; ++i)
@@ -247,7 +251,8 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
                     mm = case2(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
                     break;
                 case 9:
-                    mm = case9(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    if (WALL) mm = case9(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
+                    else mm = case0(&A, &b, t_c, m_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, p_d.p_ro, mm);
                     break;
                 case 10:
                     mm = case10(&A, &b, t_c, m_s, k, V1, V2, G, m, p_s, p_d.mu, mm);
@@ -278,18 +283,20 @@ void Sxema (double *G, double *V1, double *V2, int *st, P_she p_s, P_gas p_d)
             if (fabs(V1[m]) < EEPPSS ) V1[m] = 0;
             if (fabs(V2[m]) < EEPPSS ) V2[m] = 0;
         }
-        sleep(1);
+        //usleep(10);
 
 
         Q_Destr(&A);
         V_Destr(&b);
         V_Destr(&x);
 
-        if (SMOOTH_SOLUTION != 1)
+        residual_Ch(V1, V2, G, p_s, &n_s, u1, u2, g);
+        fprintf(fp, "%lf \t %lf \n", k*p_s.tau, sqrt(n_s.V1norm * n_s.V1norm + n_s.V2norm * n_s.V2norm));
+        //if (SMOOTH_SOLUTION != 1)
             run_gnuplot(p_s, V1, V2, G, k);
     }
 
-
+    fclose(fp);
 
     return;
 }
