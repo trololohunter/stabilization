@@ -1,4 +1,4 @@
-# 8sem
+# stabilization
 
 use cmake 3.10
 
