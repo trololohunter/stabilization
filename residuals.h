@@ -25,4 +25,6 @@ double residual_W12 (double *V1, double *V2, double *G, P_she p_s, Norm_Step *n_
 double residual_Ch_Sokol (double *V1, double *V2, double *G, P_she p_s, Norm_Step *n_s, func u1, func u2, func ro);
 double residual_L2h_Sokol (double *V1, double *V2, double *G, P_she p_s, Norm_Step *n_s, func u1, func u2, func ro);
 double residual_W12_Sokol (double *V1, double *V2, double *G, P_she p_s, Norm_Step *n_s, func u1, func u2, func ro);
+
+double residial_Ch_ (double *u, double *v, double *p, int u_size, int v_size, int p_size);
 #endif //UNTITLED2_RESIDUALS_H

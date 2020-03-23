@@ -7,14 +7,18 @@
 #include "harmonic.h"
 
 #define IT_max 0
-
+#define M M_PI
+#define N 10
 
 void print_norms(FILE *f, double *norm, int it_max);
 
 int deg2inx (int x);
 
 int main() {
-    solve();
+   solve_second();
+
+
+    //solve_first();
 /*    P_gas p_d;
     P_she p_s;
     double *G;

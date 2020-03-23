@@ -7,6 +7,7 @@
 
 //#include "harmonic_help.h"
 
-void solve ();
+void solve_first ();
+void solve_second();
 
 #endif //UNTITLED2_HARMONIC_H

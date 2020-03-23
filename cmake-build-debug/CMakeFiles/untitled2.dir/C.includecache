@@ -36,6 +36,10 @@ case_sokol.h
 functions.h
 /home/vover/CLionProjects/untitled2/functions.h
 
+/home/vover/CLionProjects/untitled2/differential_operators.c
+
+/home/vover/CLionProjects/untitled2/differential_operators.h
+
 /home/vover/CLionProjects/untitled2/functions.c
 math.h
 -
@@ -103,6 +107,8 @@ stdio.h
 -
 harmonic_help.h
 /home/vover/CLionProjects/untitled2/harmonic_help.h
+harmonic.h
+/home/vover/CLionProjects/untitled2/harmonic.h
 residuals.h
 /home/vover/CLionProjects/untitled2/residuals.h
 laspack/qmatrix.h
@@ -111,6 +117,8 @@ laspack/rtc.h
 /home/vover/CLionProjects/untitled2/laspack/rtc.h
 case.h
 /home/vover/CLionProjects/untitled2/case.h
+differential_operators.h
+/home/vover/CLionProjects/untitled2/differential_operators.h
 
 /home/vover/CLionProjects/untitled2/harmonic.h
 

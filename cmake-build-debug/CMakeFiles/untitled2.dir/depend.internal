@@ -28,6 +28,8 @@ CMakeFiles/untitled2.dir/case_sokol.c.o
  /home/vover/CLionProjects/untitled2/laspack/precond.h
  /home/vover/CLionProjects/untitled2/laspack/qmatrix.h
  /home/vover/CLionProjects/untitled2/laspack/vector.h
+CMakeFiles/untitled2.dir/differential_operators.c.o
+ /home/vover/CLionProjects/untitled2/differential_operators.c
 CMakeFiles/untitled2.dir/functions.c.o
  /home/vover/CLionProjects/untitled2/functions.c
  /home/vover/CLionProjects/untitled2/functions.h
@@ -55,9 +57,11 @@ CMakeFiles/untitled2.dir/gnuploting.c.o
  /home/vover/CLionProjects/untitled2/gnuploting.h
 CMakeFiles/untitled2.dir/harmonic.c.o
  /home/vover/CLionProjects/untitled2/case.h
+ /home/vover/CLionProjects/untitled2/differential_operators.h
  /home/vover/CLionProjects/untitled2/functions.h
  /home/vover/CLionProjects/untitled2/gas_two.h
  /home/vover/CLionProjects/untitled2/harmonic.c
+ /home/vover/CLionProjects/untitled2/harmonic.h
  /home/vover/CLionProjects/untitled2/harmonic_help.h
  /home/vover/CLionProjects/untitled2/laspack/copyrght.h
  /home/vover/CLionProjects/untitled2/laspack/eigenval.h

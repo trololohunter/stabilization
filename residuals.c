@@ -370,3 +370,17 @@ double residual_W12_Sokol (double *V1, double *V2, double *G, P_she p_s, Norm_St
     if (V2res > V1res && V2res > Gres) return sqrt(V2res);
     return sqrt(Gres);
 }
+
+double residial_Ch_ (double *u, double *v, double *p, int u_size, int v_size, int p_size) {
+    double Vmax = 0, Umax = 0, Pmax = 0;
+    int i, j;
+
+    for (i = 0; i < u_size; ++i)
+        Umax = (u[i] > Umax) ? u[i] : Umax;
+
+    for (j = 0; j < u_size; ++j)
+        Vmax = (v[j] > Vmax) ? v[j] : Vmax;
+
+    return (Vmax > Umax) ? Vmax : Umax;
+
+}

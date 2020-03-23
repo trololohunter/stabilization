@@ -19,6 +19,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled2.dir/case_sokol.c.o"
   "CMakeFiles/untitled2.dir/harmonic_help.c.o"
   "CMakeFiles/untitled2.dir/harmonic.c.o"
+  "CMakeFiles/untitled2.dir/differential_operators.c.o"
   "untitled2.pdb"
   "untitled2"
 )

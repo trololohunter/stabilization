@@ -28,6 +28,8 @@ CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/precond.h
 CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/qmatrix.h
 CMakeFiles/untitled2.dir/case_sokol.c.o: ../laspack/vector.h
 
+CMakeFiles/untitled2.dir/differential_operators.c.o: ../differential_operators.c
+
 CMakeFiles/untitled2.dir/functions.c.o: ../functions.c
 CMakeFiles/untitled2.dir/functions.c.o: ../functions.h
 CMakeFiles/untitled2.dir/functions.c.o: ../gas_two.h
@@ -54,9 +56,11 @@ CMakeFiles/untitled2.dir/gnuploting.c.o: ../gnuploting.c
 CMakeFiles/untitled2.dir/gnuploting.c.o: ../gnuploting.h
 
 CMakeFiles/untitled2.dir/harmonic.c.o: ../case.h
+CMakeFiles/untitled2.dir/harmonic.c.o: ../differential_operators.h
 CMakeFiles/untitled2.dir/harmonic.c.o: ../functions.h
 CMakeFiles/untitled2.dir/harmonic.c.o: ../gas_two.h
 CMakeFiles/untitled2.dir/harmonic.c.o: ../harmonic.c
+CMakeFiles/untitled2.dir/harmonic.c.o: ../harmonic.h
 CMakeFiles/untitled2.dir/harmonic.c.o: ../harmonic_help.h
 CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/copyrght.h
 CMakeFiles/untitled2.dir/harmonic.c.o: ../laspack/eigenval.h

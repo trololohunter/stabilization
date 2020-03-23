@@ -10,7 +10,7 @@
 
 #define zero_spl_x  30 //zero splitting x
 #define zero_spl_y  30
-#define zero_spl_t  200
+#define zero_spl_t  100
 
 #define SMOOTH_SOLUTION 1
 #define SOKOL 0

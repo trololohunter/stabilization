@@ -12,232 +12,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e88c980-b151-480e-bf84-ba69205b8835" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/differential_operators.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/differential_operators.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case.c" beforeDir="false" afterPath="$PROJECT_DIR$/case.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/case.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/case.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/case_sokol.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/case_sokol.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/functions.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/functions.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/gas_two.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/gas_two.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/gnuploting.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/gnuploting.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/harmonic.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/harmonic.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/harmonic_help.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/harmonic_help.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/main.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/residuals.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled2.dir/residuals.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/commands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/commands.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ff.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/100.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/31.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/31.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/32.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/33.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/33.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/34.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/34.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/35.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/35.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/36.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/36.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/37.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/37.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/38.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/38.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/39.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/39.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/40.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/40.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/41.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/41.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/42.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/42.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/43.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/43.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/44.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/44.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/45.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/45.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/46.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/46.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/47.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/47.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/48.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/49.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/49.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/50.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/51.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/51.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/52.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/52.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/53.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/53.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/54.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/54.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/55.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/55.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/56.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/56.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/57.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/57.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/58.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/58.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/59.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/59.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/60.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/60.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/61.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/61.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/62.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/62.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/63.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/63.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/64.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/64.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/65.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/65.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/66.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/66.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/67.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/67.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/68.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/68.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/69.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/69.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/70.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/71.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/71.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/72.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/73.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/73.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/74.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/74.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/75.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/75.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/76.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/76.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/77.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/77.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/78.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/78.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/79.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/79.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/80.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/80.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/81.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/81.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/82.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/82.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/83.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/83.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/84.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/84.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/85.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/85.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/86.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/86.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/87.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/87.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/88.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/88.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/89.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/89.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/90.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/90.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/91.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/91.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/92.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/92.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/93.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/93.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/94.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/94.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/95.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/95.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/96.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/96.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/97.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/97.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/98.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/98.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/g/99.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/g/99.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/100.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/31.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/31.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/32.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/33.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/33.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/34.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/34.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/35.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/35.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/36.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/36.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/37.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/37.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/38.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/38.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/39.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/39.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/40.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/40.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/41.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/41.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/42.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/42.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/43.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/43.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/44.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/44.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/45.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/45.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/46.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/46.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/47.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/47.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/48.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/49.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/49.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/50.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/51.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/51.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/52.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/52.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/53.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/53.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/54.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/54.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/55.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/55.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/56.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/56.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/57.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/57.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/58.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/58.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/59.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/59.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/60.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/60.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/61.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/61.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/62.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/62.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/63.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/63.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/64.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/64.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/65.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/65.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/66.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/66.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/67.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/67.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/68.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/68.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/69.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/69.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/70.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/71.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/71.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/72.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/73.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/73.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/74.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/74.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/75.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/75.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/76.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/76.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/77.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/77.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/78.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/78.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/79.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/79.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/80.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/80.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/81.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/81.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/82.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/82.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/83.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/83.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/84.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/84.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/85.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/85.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/86.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/86.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/87.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/87.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/88.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/88.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/89.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/89.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/90.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/90.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/91.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/91.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/92.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/92.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/93.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/93.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/94.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/94.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/95.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/95.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/96.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/96.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/97.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/97.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/98.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/98.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/u1/99.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/u1/99.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled2.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled2.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.c" beforeDir="false" afterPath="$PROJECT_DIR$/functions.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.h" beforeDir="false" afterPath="$PROJECT_DIR$/functions.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gas_two.c" beforeDir="false" afterPath="$PROJECT_DIR$/gas_two.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gas_two.h" beforeDir="false" afterPath="$PROJECT_DIR$/gas_two.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonic.c" beforeDir="false" afterPath="$PROJECT_DIR$/harmonic.c" afterDir="false" />
@@ -245,12 +37,8 @@
       <change beforePath="$PROJECT_DIR$/harmonic_help.c" beforeDir="false" afterPath="$PROJECT_DIR$/harmonic_help.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonic_help.h" beforeDir="false" afterPath="$PROJECT_DIR$/harmonic_help.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tex/1_scheme_formula.aux" beforeDir="false" afterPath="$PROJECT_DIR$/tex/1_scheme_formula.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tex/problem.aux" beforeDir="false" afterPath="$PROJECT_DIR$/tex/problem.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tex/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/tex/report.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tex/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tex/report.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tex/report.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/tex/report.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tex/report.tex" beforeDir="false" afterPath="$PROJECT_DIR$/tex/report.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/residuals.c" beforeDir="false" afterPath="$PROJECT_DIR$/residuals.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/residuals.h" beforeDir="false" afterPath="$PROJECT_DIR$/residuals.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -266,8 +54,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+            <state relative-caret-position="175">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -275,20 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gas_two.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gas_two.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gas_two.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7680">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            <state relative-caret-position="-7925">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="24" />
               <folding>
                 <element signature="e#38#56#0" expanded="true" />
               </folding>
@@ -296,32 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="harmonic_help.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/harmonic_help.h">
+      <file leaf-file-name="residuals.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/residuals.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="harmonic.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/harmonic.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="harmonic.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/harmonic.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2994">
-              <caret line="152" column="26" selection-start-line="152" selection-start-column="26" selection-end-line="152" selection-end-column="26" />
-              <folding>
-                <element signature="e#39#58#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="251">
+              <caret line="28" column="88" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
             </state>
           </provider>
         </entry>
@@ -329,8 +87,8 @@
       <file leaf-file-name="residuals.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/residuals.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-89">
-              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+            <state relative-caret-position="83">
+              <caret line="373" column="19" selection-start-line="373" selection-start-column="7" selection-end-line="373" selection-end-column="19" />
               <folding>
                 <element signature="e#38#56#0" expanded="true" />
               </folding>
@@ -338,13 +96,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions.c">
+      <file leaf-file-name="functions.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6384">
-              <caret line="212" column="56" selection-start-line="212" selection-start-column="56" selection-end-line="212" selection-end-column="56" />
+            <state relative-caret-position="210">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="harmonic_help.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/harmonic_help.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="harmonic.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/harmonic.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="290" column="30" selection-start-line="290" selection-start-column="30" selection-end-line="290" selection-end-column="30" />
               <folding>
-                <element signature="e#38#55#0" expanded="true" />
+                <element signature="e#39#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -353,8 +129,8 @@
       <file leaf-file-name="harmonic_help.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/harmonic_help.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
+            <state relative-caret-position="65">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
               <folding>
                 <element signature="e#39#58#0" expanded="true" />
               </folding>
@@ -362,14 +138,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="case.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case.c">
+      <file leaf-file-name="functions.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="209" column="13" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
+            <state relative-caret-position="22">
+              <caret line="202" column="7" selection-start-line="202" selection-start-column="7" selection-end-line="202" selection-end-column="7" />
               <folding>
-                <element signature="e#39#59#0" expanded="true" />
+                <element signature="e#38#55#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="differential_operators.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/differential_operators.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-503">
+              <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -383,7 +168,15 @@
       <find>test</find>
       <find>dg_dx</find>
       <find>usl</find>
+      <find>(*@-@*)</find>
+      <find>double **</find>
+      <find>p_g.mu</find>
     </findStrings>
+    <replaceStrings>
+      <replace>-</replace>
+      <replace>&amp;</replace>
+      <replace>mu</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -396,21 +189,23 @@
         <option value="$PROJECT_DIR$/case.h" />
         <option value="$PROJECT_DIR$/gnuploting.h" />
         <option value="$PROJECT_DIR$/gnuploting.c" />
-        <option value="$PROJECT_DIR$/residuals.h" />
-        <option value="$PROJECT_DIR$/residuals.c" />
         <option value="$PROJECT_DIR$/case_sokol.h" />
         <option value="$PROJECT_DIR$/case_sokol.c" />
-        <option value="$PROJECT_DIR$/harmonic_help.h" />
         <option value="$PROJECT_DIR$/functions.c" />
         <option value="$PROJECT_DIR$/functions.h" />
-        <option value="$PROJECT_DIR$/harmonic_help.c" />
-        <option value="$PROJECT_DIR$/gas_two.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/case.c" />
-        <option value="$PROJECT_DIR$/harmonic.h" />
-        <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/harmonic.c" />
+        <option value="$PROJECT_DIR$/gas_two.h" />
         <option value="$PROJECT_DIR$/gas_two.c" />
+        <option value="$PROJECT_DIR$/differential_operators.h" />
+        <option value="$PROJECT_DIR$/harmonic.h" />
+        <option value="$PROJECT_DIR$/differential_operators.c" />
+        <option value="$PROJECT_DIR$/residuals.c" />
+        <option value="$PROJECT_DIR$/residuals.h" />
+        <option value="$PROJECT_DIR$/harmonic_help.h" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/harmonic_help.c" />
+        <option value="$PROJECT_DIR$/harmonic.c" />
       </list>
     </option>
   </component>
@@ -422,8 +217,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="211" />
-    <option name="y" value="7" />
+    <option name="x" value="224" />
+    <option name="y" value="29" />
     <option name="width" value="1250" />
     <option name="height" value="1046" />
   </component>
@@ -529,12 +324,12 @@
       <workItem from="1574228722908" duration="666000" />
       <workItem from="1574350786098" duration="13723000" />
       <workItem from="1583873266910" duration="11584000" />
-      <workItem from="1584041240059" duration="7836000" />
+      <workItem from="1584041240059" duration="30080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337085000" />
+    <option name="totallyTimeSpent" value="359329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="3" width="1920" height="1049" extended-state="6" />
@@ -542,15 +337,16 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.1796875" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.74895835" weight="0.48876405" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.73072916" weight="0.48876405" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.32819384" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50885415" side_tool="true" visible="true" weight="0.44044945" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5026042" side_tool="true" visible="true" weight="0.38089886" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49114582" visible="true" weight="0.44044945" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48489583" weight="0.38876405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27478448" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49739584" visible="true" weight="0.38089886" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -558,7 +354,6 @@
       <window_info anchor="right" id="Data View" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,10 +364,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/harmonic.c</url>
+          <line>217</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/harmonic.c</url>
+          <line>223</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="80" />
+      <option name="time" value="86" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -785,81 +592,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gas_two.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1645">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="e#96#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="511">
           <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/harmonic_help.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
-          <folding>
-            <element signature="e#39#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/residuals.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-          <folding>
-            <element signature="e#38#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/harmonic_help.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/harmonic.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/harmonic.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2994">
-          <caret line="152" column="26" selection-start-line="152" selection-start-column="26" selection-end-line="152" selection-end-column="26" />
-          <folding>
-            <element signature="e#39#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -873,22 +609,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.c">
+    <entry file="file://$PROJECT_DIR$/differential_operators.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6384">
-          <caret line="212" column="56" selection-start-line="212" selection-start-column="56" selection-end-line="212" selection-end-column="56" />
+        <state relative-caret-position="180">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/harmonic.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gas_two.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-687">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
           <folding>
-            <element signature="e#38#55#0" expanded="true" />
+            <element signature="e#96#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gas_two.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7680">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        <state relative-caret-position="-7925">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="24" />
           <folding>
             <element signature="e#38#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/differential_operators.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-503">
+          <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/residuals.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="373" column="19" selection-start-line="373" selection-start-column="7" selection-end-line="373" selection-end-column="19" />
+          <folding>
+            <element signature="e#38#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/residuals.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="28" column="88" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="202" column="7" selection-start-line="202" selection-start-column="7" selection-end-line="202" selection-end-column="7" />
+          <folding>
+            <element signature="e#38#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/harmonic_help.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/harmonic_help.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="e#39#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/harmonic.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="290" column="30" selection-start-line="290" selection-start-column="30" selection-end-line="290" selection-end-column="30" />
+          <folding>
+            <element signature="e#39#58#0" expanded="true" />
           </folding>
         </state>
       </provider>

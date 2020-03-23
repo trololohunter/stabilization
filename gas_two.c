@@ -24,7 +24,7 @@ void param_dif (P_gas *p_d)
 {
     p_d->Segm_X = 2*M_PI;
     p_d->Segm_Y = 2*M_PI;
-    p_d->Segm_T = 20;
+    p_d->Segm_T = 40;
     p_d->mu = 0.1;
     p_d->p_ro = 1;
     p_d->omega = 1;

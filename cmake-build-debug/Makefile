@@ -177,6 +177,33 @@ case_sokol.c.s:
 	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/case_sokol.c.s
 .PHONY : case_sokol.c.s
 
+differential_operators.o: differential_operators.c.o
+
+.PHONY : differential_operators.o
+
+# target to build an object file
+differential_operators.c.o:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/differential_operators.c.o
+.PHONY : differential_operators.c.o
+
+differential_operators.i: differential_operators.c.i
+
+.PHONY : differential_operators.i
+
+# target to preprocess a source file
+differential_operators.c.i:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/differential_operators.c.i
+.PHONY : differential_operators.c.i
+
+differential_operators.s: differential_operators.c.s
+
+.PHONY : differential_operators.s
+
+# target to generate assembly for a file
+differential_operators.c.s:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/differential_operators.c.s
+.PHONY : differential_operators.c.s
+
 functions.o: functions.c.o
 
 .PHONY : functions.o
@@ -678,6 +705,9 @@ help:
 	@echo "... case_sokol.o"
 	@echo "... case_sokol.i"
 	@echo "... case_sokol.s"
+	@echo "... differential_operators.o"
+	@echo "... differential_operators.i"
+	@echo "... differential_operators.s"
 	@echo "... functions.o"
 	@echo "... functions.i"
 	@echo "... functions.s"
