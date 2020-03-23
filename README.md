@@ -1,6 +1,6 @@
 # stabilization
 
-use cmake 3.10
+use cmake 3.10 or more recent
 
 the installation instructions can be read here
 
