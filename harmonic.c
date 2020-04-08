@@ -188,6 +188,7 @@ void solve_first () {
         printf("\n %lf \t %lf \t %lf  \n", coef.C_mn/coeff_f.C_mn, coef.D_mn/coeff_f.D_mn, coef.P_mn/coeff_f.P_mn);
     }
 
+
     return;
 }
 
@@ -213,21 +214,29 @@ void solve_second() {
     eigenvalue_mn (&eval, mu, m, n);
     eigenvector_mn (&evec, mu, m, n);
 
+
     printf("vector 1: (%lf, \t %lf, \t %lf)\n"
            "vector 2: (%lf, \t %lf, \t %lf) \n"
            "vector 3: (%lf, \t %lf, \t %lf) \n",
            evec.v1[0], evec.v1[1], evec.v1[2],
            evec.v2[0], evec.v2[1], evec.v2[2],
            evec.v3[0], evec.v3[1], evec.v3[2] );
+
     arrays_init (&u_out, &u_in, &u_curr, &u_new,
                       &v_out, &v_in, &v_curr, &v_new,
                       &p_out, &p_in, &p_curr, &p_new, N_x, N_y);
 
     fill_with_vector_new (u_curr, v_curr, p_curr, N_x, N_y, h_x, h_y, m, n, evec.v1);
 
+
     coeff_f.C_mn = coefficient_Cmn_new(u_curr, u_size, N_x, N_y, h_x, h_y, m, n);
     coeff_f.D_mn = coefficient_Dmn_new(v_curr, v_size, N_x, N_y, h_x, h_y, m, n);
     coeff_f.P_mn = coefficient_Pmn_new(p_curr, p_size, N_x, N_y, h_x, h_y, m, n);
+
+    coeff_f.C_mn = coefficient_Cmn_new(u_new, u_size, N_x, N_y, h_x, h_y, m, n);
+    coeff_f.D_mn = coefficient_Dmn_new(v_new, v_size, N_x, N_y, h_x, h_y, m, n);
+    coeff_f.P_mn = coefficient_Pmn_new(p_new, p_size, N_x, N_y, h_x, h_y, m, n);
+
 
     printf("\n %lf \t %lf \t %lf \n",
            coeff_f.C_mn, coeff_f.D_mn, coeff_f.P_mn);
@@ -294,9 +303,11 @@ void solve_second() {
         array_to_array(p_new, p_curr, p_size);
     }
 
+
     arrays_free (&u_out, &u_in, &u_curr, &u_new,
                       &v_out, &v_in, &v_curr, &v_new,
                       &p_out, &p_in, &p_curr, &p_new);
+
 
     return;
 }
@@ -319,6 +330,7 @@ void arrays_init (double **u_out, double **u_in, double **u_curr, double **u_new
     *p_in  = (double *) malloc (sizeof(double) * N_x * N_y);
     *p_curr= (double *) malloc (sizeof(double) * N_x * N_y);
     *p_new = (double *) malloc (sizeof(double) * N_x * N_y);
+
 
     return;
 }
