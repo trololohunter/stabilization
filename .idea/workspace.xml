@@ -125,7 +125,7 @@
       <file leaf-file-name="differential_operators.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/differential_operators.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="-870">
               <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
             </state>
           </provider>
@@ -296,12 +296,12 @@
       <workItem from="1574228722908" duration="666000" />
       <workItem from="1574350786098" duration="13723000" />
       <workItem from="1583873266910" duration="11584000" />
-      <workItem from="1584041240059" duration="36511000" />
+      <workItem from="1584041240059" duration="36839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="365760000" />
+    <option name="totallyTimeSpent" value="366088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="3" width="1920" height="1049" extended-state="6" />
@@ -688,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/differential_operators.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="-870">
           <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
         </state>
       </provider>
