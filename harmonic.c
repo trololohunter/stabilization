@@ -226,16 +226,12 @@ void solve_second() {
                       &v_out, &v_in, &v_curr, &v_new,
                       &p_out, &p_in, &p_curr, &p_new, N_x, N_y);
 
-    fill_with_vector_new (u_curr, v_curr, p_curr, N_x, N_y, h_x, h_y, m, n, evec.v1);
+    fill_with_vector_new (u_curr, v_curr, p_curr, N_x, N_y, h_x, h_y, m, n, evec.v2);
 
 
     coeff_f.C_mn = coefficient_Cmn_new(u_curr, u_size, N_x, N_y, h_x, h_y, m, n);
     coeff_f.D_mn = coefficient_Dmn_new(v_curr, v_size, N_x, N_y, h_x, h_y, m, n);
     coeff_f.P_mn = coefficient_Pmn_new(p_curr, p_size, N_x, N_y, h_x, h_y, m, n);
-
-    coeff_f.C_mn = coefficient_Cmn_new(u_new, u_size, N_x, N_y, h_x, h_y, m, n);
-    coeff_f.D_mn = coefficient_Dmn_new(v_new, v_size, N_x, N_y, h_x, h_y, m, n);
-    coeff_f.P_mn = coefficient_Pmn_new(p_new, p_size, N_x, N_y, h_x, h_y, m, n);
 
 
     printf("\n %lf \t %lf \t %lf \n",
