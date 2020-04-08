@@ -1,0 +1,245 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\geometry{top = 0.5in, left = 0.5in, right = 0.5in, bottom = 0.5in}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+%\graphicspath{{g/}}
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=1.9}
+\pagestyle{empty}
+%\usepackage[margin=1.5cm, nohead]{geometry}
+\renewcommand{\baselinestretch}{1.5}
+%\setcounter{MaxMatrixCols}{20}
+\usepackage{breqn}
+\usepackage{calc}
+\usepackage{tikz}
+\usepackage{pgf}
+\newcommand{\VovaSquare}[3]{\draw[thick] (#1-0.5*#3,#2-0.5*#3) --++ (#3,0) --++ (0,#3) --++ (-#3,0) -- cycle;}
+\newcommand{\VovaCircle}[3]{\draw[thick] (#1,#2) circle (#3 cm);}
+\newcommand{\VovaDot}[3]{\filldraw[thick] (#1,#2) circle (#3 cm);}
+\newcommand{\VovaCross}[3]{\draw[thick] (#1,#2) --++ (#3,#3); \draw[thick] (#1,#2) --++ (-#3,#3); \draw[thick] (#1,#2) --++ (#3,-#3); \draw[thick] (#1,#2) --++ (-#3,-#3); }
+
+\newcommand{\VovaSize}{0.4}
+
+\begin{document}
+	\begin{tikzpicture}
+		\draw[step=2cm,dotted] (0,0) grid (14,10);
+		\foreach \x in {0,...,6}{
+			\foreach \y in {0,...,5}{
+				\VovaSquare{2*\x+1}{2*\y}{\VovaSize}
+			}
+		}
+		\foreach \x in {0,...,7}{
+			\foreach \y in {0,...,4}{
+				\VovaCircle{2*\x}{2*\y+1}{0.5*\VovaSize}
+			}
+		}
+		\foreach \x in {0,...,6}{
+			\foreach \y in {0,...,4}{
+				\VovaCross{2*\x+1}{2*\y+1}{0.5*\VovaSize}
+			}
+		}
+		\foreach \x in {0,...,7}{
+			\foreach \y in {0,...,5}{
+				\VovaDot{2*\x}{2*\y}{0.1}
+			}
+		}
+		% Поясняющий текст
+		\VovaSquare{16}{6}{\VovaSize} ; \draw (16.3,6) node[right]
+{-- \bfseries V};
+		\VovaCircle{16}{5}{0.5*\VovaSize}; \draw (16.3,5) node[right]
+{-- \bfseries U};
+		\VovaCross{16}{4}{0.5*\VovaSize}; \draw (16.3,4) node[right]
+{-- \bfseries P};
+		
+	\end{tikzpicture}
+
+\vspace{1cm}
+\begin{align*}
+U[0...N_x][0...N_y-1] \,\,\,\,\,\,\,\,  U[i][j] \sim u(x_i, \, u_j)\text{, где } 
+&x_i = i \cdot h_x, \,\,\,\, i = 0 ... N_x \\
+&y_j = \Big(j + \frac{1}{2}\Big) \cdot h_y, \,\,\,\, j = 0 ... N_y - 1 \\  
+V[0...N_x-1][0...N_y] \,\,\,\,\,\,\,\,  V[i][j] \sim v(x_i, \, u_j)\text{, где } 
+&x_i = \Big(i + \frac{1}{2}\Big) \cdot h_x, \,\,\,\, i = 0 ... N_x -1  \\
+&y_j = j \cdot h_y, \,\,\,\, j = 0 ... N_y \\ 
+P[0...N_x-1][0...N_y-1] \,\,\,\,\,\,\,\,  P[i][j] \sim p(x_i, \, u_j)\text{, где } 
+&x_i = \Big(i + \frac{1}{2}\Big) \cdot h_x, \,\,\,\, i = 0 ... N_x - 1 \\
+&y_j = \Big(j + \frac{1}{2}\Big) \cdot h_y, \,\,\,\, j = 0 ... N_y - 1 \\ 
+\end{align*}
+
+\lstset{ %
+language=C,                 % выбор языка для подсветки (здесь это С)
+basicstyle=\small\sffamily, % размер и начертание шрифта для подсветки кода
+numbers=left,               % где поставить нумерацию строк (слева\справа)
+numberstyle=\tiny,           % размер шрифта для номеров строк
+stepnumber=1,                   % размер шага между двумя номерами строк
+numbersep=5pt,                % как далеко отстоят номера строк от подсвечиваемого кода
+backgroundcolor=\color{white}, % цвет фона подсветки - используем \usepackage{color}
+showspaces=false,            % показывать или нет пробелы специальными отступами
+showstringspaces=false,      % показывать или нет пробелы в строках
+showtabs=false,             % показывать или нет табуляцию в строках
+frame=single,              % рисовать рамку вокруг кода
+tabsize=2,                 % размер табуляции по умолчанию равен 2 пробелам
+captionpos=t,              % позиция заголовка вверху [t] или внизу [b] 
+breaklines=true,           % автоматически переносить строки (да\нет)
+breakatwhitespace=false, % переносить строки только если есть пробел
+escapeinside={\%*}{*)}   % если нужно добавить комментарии в коде
+}
+\newpage
+\begin{lstlisting}[label=differential_operators,caption=Differential Operators,escapeinside={(*@}{@*)}]
+void udxdx (double *u_out, double *u_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y) {
+...
+for (i = 0; i < N_y; ++i) {
+	u_out[i*(N_x+1)+0] = 0;
+	u_out[i*(N_x+1)+N_x] = 0;
+}
+
+for (i = 0; i < N_y; ++i)
+	for (j = 1; j < N_x; ++j)
+		u_out[i*(N_x+1)+j] = (u_in[i*(N_x+1)+j+1]-2u_in[i*(N_x+1)+j]+u_in[i*(N_x+1)+j-1])/(h_x*h_x);
+...
+	return; 
+}
+
+void udydy (double *u_out, double *u_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y) {
+...
+for (j = 0; j < N_x+1; ++j) {
+	u_out[j] = (u_in[(N_x+1)+j]-u_in[j])/(h_y*h_y);
+	u_out[(N_y-1)*(N_x+1)+j] = (u_in[(N_y-1)*(N_x+1)+j]-u_in[(N_y-2)*(N_x+1)+j])/(h_y*h_y);
+}
+
+for (i = 1; i < N_y-1; ++i)
+	for (j = 0; j < N_x+1; ++j)
+		u_out[i*(N_x+1)+j] = (u_in[(i+1)*(N_x+1)+j]-2u_in[i*(N_x+1)+j]+u_in[(i-1)*(N_x+1)+j])/(h_y*h_y);
+...
+	return; 
+}
+
+
+
+void udxdy (double *u_out, double *u_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y) {
+...
+for (i = 0; i < N_y; ++i) {
+	u_out[i*(N_x+1)+0] = 0;
+	u_out[i*(N_x+1)+N_x] = 0;
+}
+
+for (j = 0; j < N_x+1; ++j) {
+	u_out[j] = 0;
+	u_out[(N_y-1)*(N_x+1)+j] = 0;
+}
+
+for (i = 1; i < N_y-1; ++i)
+	for (j = 1; j < N_x; ++j)
+		u_out[i*(N_x+1)+j] = (u_in[(i+1)*(N_x+1)+j+1]-u_in[(i+1)*(N_x+1)+j-1]-u_in[(i-1)*(N_x+1)+j+1]+u_in[(i-1)*(N_x+1)+j-1])/(h_x*h_y);
+...
+	return; 
+}
+
+void vdxdx (double *v_out, double *v_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y) {
+...
+for (i = 0; i < N_y+1; ++i) {
+	v_out[i*N_x + 0] = (v_in[i*N_x + 0]-v_in[i*N_x + 1])/(h_x*h_x);
+	v_out[i*N_x+N_x-1] = (v_in[*N_x+N_x-2]-v_in[i*N_x+N_x-1])/(h_x*h_x);
+}
+
+for (i = 0; i < N_y+1; ++i)
+	for (j = 1; j < N_x-1; ++j)
+		v_out[i*(N_x)+j] = (v_in[i*(N_x)+j+1]-2v_in[i*(N_x)+j]+v_in[i*(N_x)+j-1])/(h_x*h_x);
+...
+	return; 
+}
+
+void vdydy (double *v_out, double *v_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y) {
+...
+for (j = 0; j < N_x; ++j) {
+	v_out[j] = 0;
+	v_out[N_y*N_x+j] = 0;
+}
+
+for (i = 1; i < N_y; ++i)
+	for (j = 0; j < N_x; ++j)
+		v_out[i*N_x+j] = (v_in[(i+1)*N_x+j]-2v_in[i*N_x+j]+v_in[(i-1)*N_x+j])/(h_y*h_y);
+...
+	return; 
+}
+
+
+
+void vdxdy (double *v_out, double *v_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y) {
+...
+for (i = 0; i < N_y+1; ++i) {
+	v_out[i*N_x+0] = 0;
+	v_out[i*N_x+N_x-1] = 0;
+}
+
+for (j = 0; j < N_x; ++j) {
+	v_out[j] = 0;
+	v_out[N_y*N_x+j] = 0;
+}
+
+for (i = 1; i < N_y; ++i)
+	for (j = 1; j < N_x-1; ++j)
+		v_out[i*N_x+j] = (v_in[(i+1)*N_x+j+1]-v_in[(i+1)*N_x+j-1]-v_in[(i-1)*N_x+j+1]+v_in[(i-1)*N_x+j-1])/(h_x*h_y);
+...
+	return; 
+}
+
+void udx (double *p_out, double *u_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y) {
+...
+for (i = 0; i < N_y; ++i)
+	for (j = 0; j < N_x; ++j)
+		p_out[i*N_x+j] = (u_in[i*(N_x+1)+j+1]-u_in[i*(N_x+1)+j])/h_x;
+...
+	return; 
+}
+
+void vdy (double *p_out, double *v_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y){
+...
+for (i = 0; i < N_y; ++i)
+	for (j = 0; j < N_x; ++j)
+		p_out[i*N_x+j] = (v_in[(i+1)*N_x+j]-v_in[i*N_x+j])/h_y;
+...
+	return; 
+}
+
+void pdx (double *u_out, double *p_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y){
+...
+for (i = 0; i < N_y; ++i) {
+	u_out[i*(N_x+1)+0] = 0;
+	u_out[i*(N_x+1)+N_x] = 0;	
+}
+for (i = 0; i < N_y; ++i)
+	for (j = 1; j < N_x; ++j)
+		u_out[i*(N_x+1)+j] = (p_in[i*N_x+j]-p_in[i*N_x+j-1])/h_x;
+...
+	return; 
+}
+
+void pdy (double *v_out, double *p_in, int N_x, int N_y, double h_x, double h_y, double L_x, double L_y){
+...
+for (j = 0; j < N_x; ++j) {
+	v_out[j] = 0;
+	v_out[N_y*N_x+j] = 0;	
+}
+for (i = 1; i < N_y; ++i)
+	for (j = 0; j < N_x; ++j)
+		v_out[i*N_x+j] = (p_in[i*N_x+j]-p_in[(i-1)*N_x+j])/h_y;
+...
+	return; 
+}
+\end{lstlisting}
+\end{document}
