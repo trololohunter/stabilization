@@ -31,6 +31,7 @@ void arrays_free (double **u_out, double **u_in, double **u_curr, double **u_new
                   double **p_out, double **p_in, double **p_curr, double **p_new);
 void array_zero (double *a, int size);
 void array_to_array (double *from, double *to, int size);
+void print_matr (double *a, int N, int M);
 
 void solve_first () {
 
@@ -221,85 +222,96 @@ void solve_second() {
            evec.v1[0], evec.v1[1], evec.v1[2],
            evec.v2[0], evec.v2[1], evec.v2[2],
            evec.v3[0], evec.v3[1], evec.v3[2] );
+for (m = 1; m < 10; m++)
+    for (n = 1; n < 10; n++) {
+        arrays_init(&u_out, &u_in, &u_curr, &u_new,
+                    &v_out, &v_in, &v_curr, &v_new,
+                    &p_out, &p_in, &p_curr, &p_new, N_x, N_y);
 
-    arrays_init (&u_out, &u_in, &u_curr, &u_new,
-                      &v_out, &v_in, &v_curr, &v_new,
-                      &p_out, &p_in, &p_curr, &p_new, N_x, N_y);
+        fill_with_vector_new(u_curr, v_curr, p_curr, N_x, N_y, h_x, h_y, 1, 1, evec.v2);
 
-    fill_with_vector_new (u_curr, v_curr, p_curr, N_x, N_y, h_x, h_y, m, n, evec.v2);
+        //print_matr(u_curr, N_y, N_x + 1);
+        //print_matr(v_curr, N_y + 1, N_x);
+        //print_matr(p_curr, N_y, N_x);
+
+        coeff_f.C_mn = coefficient_Cmn_new(u_curr, u_size, N_x, N_y, h_x, h_y, m, n);
+        coeff_f.D_mn = coefficient_Dmn_new(v_curr, v_size, N_x, N_y, h_x, h_y, m, n);
+        coeff_f.P_mn = coefficient_Pmn_new(p_curr, p_size, N_x, N_y, h_x, h_y, m, n);
 
 
-    coeff_f.C_mn = coefficient_Cmn_new(u_curr, u_size, N_x, N_y, h_x, h_y, m, n);
-    coeff_f.D_mn = coefficient_Dmn_new(v_curr, v_size, N_x, N_y, h_x, h_y, m, n);
-    coeff_f.P_mn = coefficient_Pmn_new(p_curr, p_size, N_x, N_y, h_x, h_y, m, n);
+        printf("\n C_%d%d = %lf \t D_%d%d = %lf \t P_%d%d = %lf \n",
+               m,n, coeff_f.C_mn, m,n,coeff_f.D_mn, m,n,coeff_f.P_mn);
 
+        for (int i = 0; i < 3; ++i) {
 
-    printf("\n %lf \t %lf \t %lf \n",
-           coeff_f.C_mn, coeff_f.D_mn, coeff_f.P_mn);
+            array_to_array(u_curr, u_in, u_size);
+            array_to_array(v_curr, v_in, v_size);
+            array_to_array(p_curr, p_in, p_size);
 
-    for (int i = 0; i < 3; ++i){
+            udxdx(u_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            vdydy(v_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            for (j = 0; j < u_size; ++j)
+                u_new[j] = mu * tay * 4 * u_out[j] / (ro__0 * 3);
+            for (k = 0; k < v_size; ++k)
+                v_new[k] = mu * tay * 4 * v_out[k] / (ro__0 * 3);
 
-        array_to_array(u_curr, u_in, u_size);
-        array_to_array(v_curr, v_in, v_size);
-        array_to_array(p_curr, p_in, p_size);
+            udydy(u_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            vdxdx(v_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            for (j = 0; j < u_size; ++j)
+                u_new[j] += mu * tay * u_out[j] / (ro__0);
+            for (k = 0; k < v_size; ++k)
+                v_new[k] += mu * tay * v_out[k] / (ro__0);
 
-        udxdx(u_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        vdydy(v_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        for (j = 0; j < u_size; ++j)
-            u_new[j] = mu * tay * 4 * u_out[j]/ (ro__0 * 3);
-        for (k = 0; k < v_size; ++k)
-            v_new[k] = mu * tay * 4 * v_out[k]/ (ro__0 * 3);
+            udxdy(u_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            vdxdy(v_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            for (j = 0; j < u_size; ++j)
+                u_new[j] += mu * tay * u_out[j] / (ro__0 * 3);
+            for (k = 0; k < v_size; ++k)
+                v_new[k] += mu * tay * v_out[k] / (ro__0 * 3);
 
-        udydy(u_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        vdxdx(v_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        for (j = 0; j < u_size; ++j)
-            u_new[j] += mu * tay * u_out[j]/ (ro__0);
-        for (k = 0; k < v_size; ++k)
-            v_new[k] += mu * tay * v_out[k]/ (ro__0);
+            pdx(u_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            pdy(v_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            for (j = 0; j < u_size; ++j)
+                u_new[j] -= c_ro_0 * tay * u_out[j] / (ro__0);
+            for (k = 0; k < v_size; ++k)
+                v_new[k] -= c_ro_0 * tay * v_out[k] / (ro__0);
 
-        udxdy(u_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        vdxdy(v_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        for (j = 0; j < u_size; ++j)
-            u_new[j] += mu * tay * u_out[j]/ (ro__0 * 3);
-        for (k = 0; k < v_size; ++k)
-            v_new[k] += mu * tay * v_out[k]/ (ro__0 * 3);
+            for (j = 0; j < u_size; ++j)
+                u_new[j] += u_in[j];
+            for (k = 0; k < v_size; ++k)
+                v_new[k] += v_in[k];
 
-        pdx(u_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        pdy(v_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        for (j = 0; j < u_size; ++j)
-            u_new[j] -= c_ro_0 * tay * u_out[j]/ (ro__0);
-        for (k = 0; k < v_size; ++k)
-            v_new[k] -= c_ro_0 * tay * v_out[k]/ (ro__0);
+            udx(p_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            for (j = 0; j < p_size; ++j)
+                p_new[j] = -p_out[j] * ro__0 * tay;
+            vdy(p_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
+            for (j = 0; j < p_size; ++j)
+                p_new[j] += -p_out[j] * ro__0 * tay;
 
-        for (j = 0; j < u_size; ++j)
-            u_new[j] += u_in[j];
-        for (k = 0; k < v_size; ++k)
-            v_new[k] += v_in[k];
+            for (j = 0; j < p_size; ++j)
+                p_new[j] += p_in[j];
 
-        udx(p_out, u_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        for (j = 0; j < p_size; ++j)
-            p_new[j] = -p_out[j] * ro__0 * tay;
-        vdy(p_out, v_in, N_x, N_y, h_x, h_y, L_x, L_y);
-        for (j = 0; j < p_size; ++j)
-            p_new[j] += -p_out[j] * ro__0 * tay;
+            //print_matr(u_new, N_y, N_x + 1);
+            //print_matr(v_new, N_y + 1, N_x);
+            //print_matr(p_new, N_y, N_x);
 
-        for (j = 0; j < p_size; ++j)
-            p_new[j] += p_in[j];
+            coef.C_mn = coefficient_Cmn_new(u_new, u_size, N_x, N_y, h_x, h_y, m, n);
+            coef.D_mn = coefficient_Dmn_new(v_new, v_size, N_x, N_y, h_x, h_y, m, n);
+            coef.P_mn = coefficient_Pmn_new(p_new, p_size, N_x, N_y, h_x, h_y, m, n);
 
-        coef.C_mn = coefficient_Cmn_new(u_new, u_size, N_x, N_y, h_x, h_y, m, n);
-        coef.D_mn = coefficient_Dmn_new(v_new, v_size, N_x, N_y, h_x, h_y, m, n);
-        coef.P_mn = coefficient_Pmn_new(p_new, p_size, N_x, N_y, h_x, h_y, m, n);
+            printf("\n C_%d%d = %lf \t D_%d%d = %lf \t P_%d%d = %lf \t %lf\n",
+                   m,n, coeff_f.C_mn, m,n,coeff_f.D_mn, m,n,coeff_f.P_mn, residial_Ch_(u_new, v_new, p_new, u_size, v_size, p_size));
+            //printf("\n %lf \t %lf \t %lf  \t %lf \n",
+            //       coef.C_mn, coef.D_mn, coef.P_mn, residial_Ch_(u_new, v_new, p_new, u_size, v_size, p_size));
+            //printf("\n %lf \t %lf \t %lf  \n", coef.C_mn / coeff_f.C_mn, coef.D_mn / coeff_f.D_mn,
+            //       coef.P_mn / coeff_f.P_mn);
 
-        printf("\n %lf \t %lf \t %lf  \t %lf \n",
-               coef.C_mn, coef.D_mn, coef.P_mn, residial_Ch_(u_new,v_new,p_new,u_size, v_size,p_size));
-        printf("\n %lf \t %lf \t %lf  \n", coef.C_mn/coeff_f.C_mn, coef.D_mn/coeff_f.D_mn, coef.P_mn/coeff_f.P_mn);
+            array_to_array(u_new, u_curr, u_size);
+            array_to_array(v_new, v_curr, v_size);
+            array_to_array(p_new, p_curr, p_size);
+        }
 
-        array_to_array(u_new, u_curr, u_size);
-        array_to_array(v_new, v_curr, v_size);
-        array_to_array(p_new, p_curr, p_size);
     }
-
-
     arrays_free (&u_out, &u_in, &u_curr, &u_new,
                       &v_out, &v_in, &v_curr, &v_new,
                       &p_out, &p_in, &p_curr, &p_new);
@@ -353,6 +365,23 @@ void array_to_array (double *from, double *to, int size) {
 
     for (int i = 0; i < size; ++i)
         to[i] = from[i];
+
+    return;
+}
+
+void print_matr (double *a, int N, int M){
+    FILE *fp;
+    int i = 0, j = 0;
+
+    fp = fopen("matrix","a");
+
+    for (i = 0; i < N; ++i) {
+        for (j = 0; j < M; ++j)
+            fprintf(fp, "%+.2lf \t", a[i*M + j]);
+        fprintf(fp, "\n");
+    }
+    fprintf(fp, "\n \n \n");
+    fclose(fp);
 
     return;
 }
