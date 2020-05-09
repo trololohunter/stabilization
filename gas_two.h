@@ -15,7 +15,7 @@
 #define SMOOTH_SOLUTION 1
 #define SOKOL 0
 #define GAMMA 1.4
-#define WALL 0
+#define WALL 1
 
 typedef struct
 {

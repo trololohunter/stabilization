@@ -9,5 +9,6 @@
 
 void solve_first ();
 void solve_second();
-
+void solve_third();
+void qwerty();
 #endif //UNTITLED2_HARMONIC_H

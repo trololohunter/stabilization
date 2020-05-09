@@ -8,15 +8,15 @@
 
 #define IT_max 0
 #define M M_PI
-#define N 10
+//#define N 10
 
 void print_norms(FILE *f, double *norm, int it_max);
 
 int deg2inx (int x);
 
 int main() {
-   solve_second();
-
+   solve_third();
+//qwerty();
 
     //solve_first();
 /*    P_gas p_d;
@@ -120,8 +120,8 @@ int main() {
     free(nl2_v2);
     free(nw12_g);
     free(nw12_v1);
-    free(nw12_v2);
-*/
+    free(nw12_v2);*/
+
     return 0;
 }
 

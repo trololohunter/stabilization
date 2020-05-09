@@ -34,6 +34,7 @@ typedef struct {
 
 void eigenvalue_mn (eigenvalue *eval, double mu, int m, int n);
 void eigenvector_mn (eigenvector *evec, double mu, int m, int n);
+void eigenvector_mn_t (eigenvector *evec, double mu, int m, int n);
 
 void phi_mn_sin_cos (double *phi, int m, int n, P_she p_s);
 void phi_mn_cos_sin (double *phi, int m, int n, P_she p_s);
@@ -61,7 +62,7 @@ void coef_from_function (/*in*/ double *u, double *v, double *p,
                                 double h_x, double h_y, int N_x, int N_y);
 void funcion_from_coef (/*in*/ double *C, double *D, double *P,
                         /*out*/ double *u, double *v, double *p,
-                               double h_x, double h_y, int N_x, int N_y);
+                               double h_x, double h_y, int N_x, int N_y, double mu, double t);
 
 void count_next_coef ( double *C_in, double *D_in, double *P_in,
                     double *C_out, double *D_out, double *P_out,

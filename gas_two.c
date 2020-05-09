@@ -121,7 +121,24 @@ int son (int i, int j, P_she *p_s) //  the status of the node
         return 6;
     if (i == p_s->M_y && j == p_s->M_x) // x = a; y = b
         return 8;
-    if (i > 0 && i < (p_s->M_y/2) && j == p_s->M_x/2) // Interpretation
+    //if (i > 0 && i < (p_s->M_y/2) && j == p_s->M_x/2) // Interpretation
+    //if (i == p_s->M_y/2 && (j > 0 && (j < p_s->M_x/2 - 5) || (j > p_s->M_x/2 + 5) && j < p_s->M_x))
+    //if (i == p_s->M_y/2 &&
+    //    (j > 0 && (j < p_s->M_x/2 - 10) || (j > p_s->M_x/2 + 10) && j < p_s->M_x))
+    /*if ((i == p_s->M_y/4 &&
+        (j > 0 && (j < p_s->M_x/2 - 10) || (j > p_s->M_x/2 + 10) && j < p_s->M_x))
+        ||    (i == 3*p_s->M_y/4 &&
+             (j > 0 && (j < p_s->M_x/2 - 10) || (j > p_s->M_x/2 + 10) && j < p_s->M_x)))*/
+    if ((i == p_s->M_y/6 &&
+         (j > 0 && (j < p_s->M_x/2 - 12) || (j > p_s->M_x/2 + 12) && j < p_s->M_x))
+        ||    (i == 2*p_s->M_y/6 &&
+               (j > 0 && (j < p_s->M_x/2 - 12) || (j > p_s->M_x/2 + 12) && j < p_s->M_x))
+              ||    (i == 3*p_s->M_y/6 &&
+                     (j > 0 && (j < p_s->M_x/2 - 12) || (j > p_s->M_x/2 + 12) && j < p_s->M_x))
+                    ||    (i == 4*p_s->M_y/6 &&
+                           (j > 0 && (j < p_s->M_x/2 - 12) || (j > p_s->M_x/2 + 12) && j < p_s->M_x))
+                          ||    (i == 5*p_s->M_y/6 &&
+                                 (j > 0 && (j < p_s->M_x/2 - 12) || (j > p_s->M_x/2 + 12) && j < p_s->M_x)))
         return 9;
     if (i == 0 && j > 0 && j < p_s->M_x/2) // x in; y = 0
         return 3;

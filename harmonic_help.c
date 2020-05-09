@@ -96,39 +96,86 @@ double coefficient_Pmn (double *p, P_she p_s, int m, int n){
 }
 void eigenvalue_mn (eigenvalue *eval, double mu, int m, int n){
 
-    double W = sqrt(- 9 * C_ro_0 * m * m * ro_0 * ro_0
-                    - 9 * C_ro_0 * m * n * ro_0 * ro_0
+    double W = sqrt((- 9 * C_ro_0 * m * m * ro_0 * ro_0
+                    - 9 * C_ro_0 * n * n * ro_0 * ro_0
                     + m*m*m*m*mu*mu
                     + 2*m*m*n*n*mu*mu
-                    + n*n*n*n*mu*mu);
-    eval->lambda_1 = - mu*(m*m + n*n)/2;
-    eval->lambda_2 = W / (6 * ro_0) + 2 * eval->lambda_1 / 3;
-    eval->lambda_3 = W / (6 * ro_0) - 2 * eval->lambda_1 / 3;
+                    + n*n*n*n*mu*mu) > 0 ?
+                    (- 9 * C_ro_0 * m * m * ro_0 * ro_0
+                     - 9 * C_ro_0 * n * n * ro_0 * ro_0
+                     + m*m*m*m*mu*mu
+                     + 2*m*m*n*n*mu*mu
+                     + n*n*n*n*mu*mu) : 0);
+    eval->lambda_1 = - mu*(m*m + n*n)/(4 * ro_0);
+    eval->lambda_2 = (W - mu * (m*m + n*n)) / (6 * ro_0) ;//+ 2 * eval->lambda_1 / 3;
+    eval->lambda_3 = -(W + mu * (m*m + n*n))/ (6 * ro_0);// - 2 * eval->lambda_1 / 3;
 
     return;
 }
 void eigenvector_mn (eigenvector *evec, double mu, int m, int n){
 
-    double W = sqrt(- 9 * C_ro_0 * m * m * ro_0 * ro_0
-                    - 9 * C_ro_0 * m * n * ro_0 * ro_0
+    double W = - 9 * C_ro_0 * m * m * ro_0 * ro_0
+                    - 9 * C_ro_0 * n * n * ro_0 * ro_0
                     + m*m*m*m*mu*mu
                     + 2*m*m*n*n*mu*mu
-                    + n*n*n*n*mu*mu);
+                    + n*n*n*n*mu*mu;
     evec->v1[0] = 0;
     evec->v1[1] = -n/m;
     evec->v1[2] = 1;
-    evec->v2[0] = (m*m*mu + 2*n*n*mu + 2 * W) / (6 * C_ro_0 * m)
-                 - n*mu*(-m*m*mu + m*n*mu - 2*n*n*mu - 2*W)
-               / (6 * C_ro_0 * (2*m*m*mu - m*n*mu + n*n*mu + 2*W ));
-    evec->v2[1] = (m*m*mu - m*n*mu + 2*n*n*mu + 2*W)
-                  / (2*m*m*mu - n*m*mu + n*n*mu + 2*W);
-    evec->v2[2] = 1;
-    evec->v3[0] = (m*m*mu + 2*n*n*mu - 2 * W) / (6 * C_ro_0 * m)
-                  - n*mu*(m*m*mu - m*n*mu + 2*n*n*mu - 2*W)
-                    / (6 * C_ro_0 * (-2*m*m*mu + m*n*mu - n*n*mu + 2*W ));
-    evec->v3[1] = (m*m*mu - m*n*mu + 2*n*n*mu - 2*W)
-                  / (2*m*m*mu - n*m*mu + n*n*mu - 2*W);
-    evec->v3[2] = 1;
+    //evec->v2[0] = (m*m*mu + 2*n*n*mu + 2 * W) / (6 * C_ro_0 * m) - n*mu*(-m*m*mu + m*n*mu - 2*n*n*mu - 2*W) / (6 * C_ro_0 * (2*m*m*mu - m*n*mu + n*n*mu + 2*W ));
+    //evec->v2[1] = (m*m*mu - m*n*mu + 2*n*n*mu + 2*W) / (2*m*m*mu - n*m*mu + n*n*mu + 2*W);
+    if (W < 0) {
+        evec->v2[0] = mu*(m*m + n*n) / (3 * n * C_ro_0);
+        evec->v2[1] = m / n;
+        evec->v2[2] = 1;
+        evec->v3[0] = sqrt(-W) / (3 * n * C_ro_0);
+        evec->v3[1] = 0;
+        evec->v3[2] = 0;
+    }
+    else {
+        evec->v2[0] = (mu*(m*m + n*n) + sqrt(W)) / (3 * n * C_ro_0);
+        evec->v2[1] = m / n;
+        evec->v2[2] = 1;
+        //evec->v3[0] = (m*m*mu + 2*n*n*mu - 2 * W) / (6 * C_ro_0 * m) - n*mu*(m*m*mu - m*n*mu + 2*n*n*mu - 2*W) / (6 * C_ro_0 * (-2*m*m*mu + m*n*mu - n*n*mu + 2*W ));
+        //evec->v3[1] = (m*m*mu - m*n*mu + 2*n*n*mu - 2*W) / (2*m*m*mu - n*m*mu + n*n*mu - 2*W);
+        evec->v3[0] = (mu*(m*m + n*n) - sqrt(W)) / (3 * n * C_ro_0);
+        evec->v3[1] = m / n;
+        evec->v3[2] = 1;
+    }
+
+    return;
+}
+
+void eigenvector_mn_t (eigenvector *evec, double mu, int m, int n){
+
+    double W = - 9 * C_ro_0 * m * m * ro_0 * ro_0
+               - 9 * C_ro_0 * n * n * ro_0 * ro_0
+               + m*m*m*m*mu*mu
+               + 2*m*m*n*n*mu*mu
+               + n*n*n*n*mu*mu;
+    evec->v1[0] = 0;
+    evec->v1[1] = -n/m;
+    evec->v1[2] = 1;
+    //evec->v2[0] = (m*m*mu + 2*n*n*mu + 2 * W) / (6 * C_ro_0 * m) - n*mu*(-m*m*mu + m*n*mu - 2*n*n*mu - 2*W) / (6 * C_ro_0 * (2*m*m*mu - m*n*mu + n*n*mu + 2*W ));
+    //evec->v2[1] = (m*m*mu - m*n*mu + 2*n*n*mu + 2*W) / (2*m*m*mu - n*m*mu + n*n*mu + 2*W);
+    if (W < 0) {
+        evec->v2[0] = -mu*(m*m + n*n) / (3 * n * ro_0 * ro_0);
+        evec->v2[1] = m / n;
+        evec->v2[2] = 1;
+        evec->v3[0] = sqrt(-W) / (3 * n * ro_0 * ro_0);
+        evec->v3[1] = 0;
+        evec->v3[2] = 0;
+    }
+    else {
+        evec->v2[0] = (-mu*(m*m + n*n) - sqrt(W)) / (3 * n * ro_0 * ro_0);
+        evec->v2[1] = m / n;
+        evec->v2[2] = 1;
+        //evec->v3[0] = (m*m*mu + 2*n*n*mu - 2 * W) / (6 * C_ro_0 * m) - n*mu*(m*m*mu - m*n*mu + 2*n*n*mu - 2*W) / (6 * C_ro_0 * (-2*m*m*mu + m*n*mu - n*n*mu + 2*W ));
+        //evec->v3[1] = (m*m*mu - m*n*mu + 2*n*n*mu - 2*W) / (2*m*m*mu - n*m*mu + n*n*mu - 2*W);
+        evec->v3[0] = (-mu*(m*m + n*n) + sqrt(W)) / (3 * n * ro_0 * ro_0);
+        evec->v3[1] = m / n;
+        evec->v3[2] = 1;
+    }
 
     return;
 }
@@ -204,7 +251,7 @@ double scalar_product_new (double *x, double *y, int size, double h_x, double h_
     int j = 0;
 
     for (i = 0; i < size; ++i)
-        rez += x[i] * y[i];
+        rez += x[i] * y[i] * h_x * h_y;
 
     return rez;
 }
@@ -297,28 +344,21 @@ void coef_from_function (/*in*/ double *u, double *v, double *p,
     int v_size = (N_y + 1) * N_x;
     int p_size = N_x * N_y;
 
-    C[0] = 0;
-    D[0] = 0;
-    P[0] = 0;
-
-    for (n = 1; n < N_y; ++n)
-        for (m = 0; m < N_x; ++m) {
-            C[n*N_x+m] = coefficient_Cmn_new(u, u_size, N_x, N_y, h_x, h_y, m, n);
-            D[n*N_x+m] = coefficient_Dmn_new(v, v_size, N_x, N_y, h_x, h_y, m, n);
-            P[n*N_x+m] = coefficient_Pmn_new(p, p_size, N_x, N_y, h_x, h_y, m, n);
+    for (n = 0; n < N_y-1; ++n)
+        for (m = 0; m < N_x-1; ++m) {
+            C[n*(N_x-1)+m] = coefficient_Cmn_new(u, u_size, N_x, N_y, h_x, h_y, m+1, n+1);
+            D[n*(N_x-1)+m] = coefficient_Dmn_new(v, v_size, N_x, N_y, h_x, h_y, m+1, n+1);
+            P[n*(N_x-1)+m] = coefficient_Pmn_new(p, p_size, N_x, N_y, h_x, h_y, m+1, n+1);
         }
-    for (m = 1; m < N_x; ++m) {
-        C[m] = coefficient_Cmn_new(u, u_size, N_x, N_y, h_x, h_y, m, 0);
-        D[m] = coefficient_Dmn_new(v, v_size, N_x, N_y, h_x, h_y, m, 0);
-        P[m] = coefficient_Pmn_new(p, p_size, N_x, N_y, h_x, h_y, m, 0);
-    }
+
 
     return;
 }
 void funcion_from_coef (/*in*/ double *C, double *D, double *P,
                         /*out*/ double *u, double *v, double *p,
-                               double h_x, double h_y, int N_x, int N_y){
+                               double h_x, double h_y, int N_x, int N_y, double mu, double t){
     int i = 0, j = 0, m = 0, n = 0;
+    eigenvalue eval;
 
     // u from C
     for (i = 0; i < N_y; ++i) {
@@ -326,9 +366,10 @@ void funcion_from_coef (/*in*/ double *C, double *D, double *P,
         u[i*(N_x+1)+N_x] = 0;
         for (j = 1; j < N_x; ++j) {
             u[i*(N_x+1) + j] = 0;
-            for (n = 0; n < N_y; ++n) {
-                for (m = 0; m < N_x; ++m) {
-                    u[i*(N_x+1) + j] += C[n*N_x+m] * sin(j * h_x * m/2)*cos((i + 1/2) * h_y*n/2);
+            for (n = 0; n < N_y-1; ++n) {
+                for (m = 0; m < N_x-1; ++m) {
+                    eigenvalue_mn(&eval, mu, m+1, n+1);
+                    u[i*(N_x+1) + j] += exp(t*eval.lambda_1) * C[n*(N_x-1)+m] * sin(j * h_x * (m+1)/2)*cos((i + 1/2) * h_y*(n+1)/2);
                 }
             }
         }
@@ -342,9 +383,10 @@ void funcion_from_coef (/*in*/ double *C, double *D, double *P,
     for (i = 1; i < N_y; ++i)
         for (j = 0; j < N_x; ++j) {
             v[i*N_x + j] = 0;
-            for (n = 0; n < N_y; ++n) {
-                for (m = 0; m < N_x; ++m) {
-                    v[i*N_x + j] += D[n*N_x+m] * cos((j + 1/2) * h_x * m/2)*sin(i * h_y*n/2);
+            for (n = 0; n < N_y-1; ++n) {
+                for (m = 0; m < N_x-1; ++m) {
+                    eigenvalue_mn(&eval, mu, m+1, n+1);
+                    v[i*N_x + j] += exp(t*eval.lambda_2) *D[n*(N_x-1)+m] * cos((j + 1/2) * h_x * (m+1)/2)*sin(i * h_y*(n+1)/2);
                 }
             }
         }
@@ -352,10 +394,10 @@ void funcion_from_coef (/*in*/ double *C, double *D, double *P,
     //p from P
     for (i = 0; i < N_y; ++i)
         for (j = 0; j < N_x; ++j) {
-            p[i*N_x + j] = 0;
-            for (n = 0; n < N_y; ++n) {
-                for (m = 0; m < N_x; ++m) {
-                    p[i*N_x + j] += P[n*N_x+m] * cos((j + 1/2) * h_x * m/2)*cos((i + 1/2) * h_y*n/2);
+            for (n = 0; n < N_y-1; ++n) {
+                for (m = 0; m < N_x-1; ++m) {
+                    eigenvalue_mn(&eval, mu, m+1, n+1);
+                    p[i*N_x + j] += exp(t*eval.lambda_3) *P[n*(N_x-1)+m] * cos((j + 1/2) * h_x * (m+1)/2)*cos((i + 1/2) * h_y*(n+1)/2);
                 }
             }
         }
@@ -372,18 +414,18 @@ void count_next_coef ( double *C_in, double *D_in, double *P_in,
     coef_for_harmonic_system CfHS;
 
 
-    for (j = 0; j < N_y; ++j)
-        for (i = 0; i < N_x; ++i){
-            fill_coef_for_harmonic_system_ij_in(&CfHS, i, j, h_x, h_y, rho_0, C_rho, tau, mu);
-            P_out[j*N_x +i] = CfHS.P[0] * P_in[j*N_x +i]
-                              + CfHS.P[1] * C_in[j*N_x +i]
-                              + CfHS.P[2] * D_in[j*N_x +i];
-            C_out[j*N_x +i] = CfHS.C[0] * P_in[j*N_x +i]
-                              + CfHS.C[1] * C_in[j*N_x +i]
-                              + CfHS.C[2] * D_in[j*N_x +i];
-            D_out[j*N_x +i] = CfHS.D[0] * P_in[j*N_x +i]
-                              + CfHS.D[1] * C_in[j*N_x +i]
-                              + CfHS.D[2] * D_in[j*N_x +i];
+    for (j = 0; j < N_y-1; ++j)
+        for (i = 0; i < N_x-1; ++i){
+            fill_coef_for_harmonic_system_ij_in(&CfHS, i+1, j+1, h_x, h_y, rho_0, C_rho, tau, mu);
+            P_out[j*(N_x-1) +i] = CfHS.P[0] * P_in[j*(N_x-1) +i]
+                              + CfHS.P[1] * C_in[j*(N_x-1) +i]
+                              + CfHS.P[2] * D_in[j*(N_x-1) +i];
+            C_out[j*(N_x-1) +i] = CfHS.C[0] * P_in[j*(N_x-1) +i]
+                              + CfHS.C[1] * C_in[j*(N_x-1) +i]
+                              + CfHS.C[2] * D_in[j*(N_x-1) +i];
+            D_out[j*(N_x-1) +i] = CfHS.D[0] * P_in[j*(N_x-1) +i]
+                              + CfHS.D[1] * C_in[j*(N_x-1) +i]
+                              + CfHS.D[2] * D_in[j*(N_x-1) +i];
         }
 
 

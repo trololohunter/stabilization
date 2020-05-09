@@ -219,13 +219,7 @@ void first_fill(double *V1, double *V2, double *G, P_she p_s, double w, func u1,
                 V1[i * (p_s.M_x + 1) + j] = 0;
                 V2[i * (p_s.M_x + 1) + j] = 0;
             }*/
-            if (WALL) {
-                if (i == p_s.M_y / 2 && j > p_s.M_x / 2 && j < p_s.M_x + 1) {
-                    V1[i * (p_s.M_x + 1) + j] = 0;
-                    V2[i * (p_s.M_x + 1) + j] = sin(j * p_s.h_x);
-                }
-            }
-            else if (i == p_s.M_y / 2 && j > 0 && j < p_s.M_x + 1) {
+            if (i == p_s.M_y / 2 + 1 && j > 0 && j < p_s.M_x + 1) {
                 V1[i * (p_s.M_x + 1) + j] = 0;
                 V2[i * (p_s.M_x + 1) + j] = sin(j * p_s.h_x / 2);
             }

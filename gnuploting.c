@@ -64,10 +64,10 @@ void fill_command_file (const char *val_name, P_she p_s, int time_step,
     FILE *f_com;
     f_com = fopen (filename_com, "w");
 
-    fprintf (f_com, "set terminal png size 1024, 768\n");
+    fprintf (f_com, "set terminal png size 1024, 1024\n");
     fprintf (f_com, "set output '%s/%d.png'\n", val_name, time_step);
     fprintf (f_com, "set xlabel \"t = %.4f\" font \"Times-Roman,30\"\n", t);
-    fprintf (f_com, "set xrange [0:3*pi]; set yrange [0:2*pi]\n");
+    fprintf (f_com, "set xrange [0:2*pi]; set yrange [0:2*pi]\n");
     fprintf (f_com, "%s\n", val_path);
 
     fclose (f_com);
@@ -83,7 +83,9 @@ void print_paint_pm3d_command (char *path, const char *fname)
 
 void print_paint_vectors_command (char *path, const char *fname)
 {
-    sprintf (path, "plot '%s' using 1:2:3:4 with vectors filled head lw 3%c",
+    const char *palette = "set palette rgbformulae 18,20,22";
+    sprintf (path, "plot '%s' using 1:2:3:4 w vec lw 3 filled head%c",
+ //   sprintf (path, "%s; plot '%s' using 1:2:($3/(sqrt(($3-$1)**2+($4-$2)**2))):($4/(sqrt(($3-$1)**2+($4-$2)**2))) w vec lw 3 filled head%c",
              fname, '\0');
 }
 
